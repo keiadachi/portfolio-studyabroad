@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_08_085448) do
+ActiveRecord::Schema.define(version: 2021_05_08_095520) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -24,6 +24,43 @@ ActiveRecord::Schema.define(version: 2021_05_08_085448) do
     t.index ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
   end
 
+  create_table "brochures", force: :cascade do |t|
+    t.string "title"
+    t.string "brochure_countries"
+    t.date "departure_date"
+    t.string "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "cities", force: :cascade do |t|
+    t.integer "country_id"
+    t.string "city_name"
+    t.integer "city_population"
+    t.text "climate"
+    t.integer "tourist_attraction"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "countries", force: :cascade do |t|
+    t.string "country_name"
+    t.string "capital"
+    t.integer "country_population"
+    t.string "language"
+    t.string "currency"
+    t.string "image_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "faqs", force: :cascade do |t|
+    t.text "question"
+    t.text "answer"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "guests", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -34,6 +71,30 @@ ActiveRecord::Schema.define(version: 2021_05_08_085448) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_guests_on_email", unique: true
     t.index ["reset_password_token"], name: "index_guests_on_reset_password_token", unique: true
+  end
+
+  create_table "homes", force: :cascade do |t|
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "maps", force: :cascade do |t|
+    t.string "map_address"
+    t.float "latitude"
+    t.float "longitude"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "schools", force: :cascade do |t|
+    t.integer "city_id"
+    t.string "school_name"
+    t.string "course_name"
+    t.text "introduction"
+    t.string "stay"
+    t.string "nationality"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

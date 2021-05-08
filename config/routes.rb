@@ -1,4 +1,11 @@
 Rails.application.routes.draw do
+
+  namespace :guest do
+    get 'homes/top'
+    get 'homes/about'
+  end
+  
+
   namespace :guest do
     get 'schools/show'
   end

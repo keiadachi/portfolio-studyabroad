@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  city_id: 1
+  school_name: MyString
+  course_name: MyString
+  introduction: MyText
+  stay: MyString
+  nationality: MyString
+
+two:
+  city_id: 1
+  school_name: MyString
+  course_name: MyString
+  introduction: MyText
+  stay: MyString
+  nationality: MyString
