@@ -1,6 +1,7 @@
 class ApplicationController < ActionController::Base
 
   before_action :configure_permitted_parameters, if: :devise_controller?
+  #deviseを利用する前に下記事項をよむ
 
   protected
 
@@ -12,6 +13,7 @@ class ApplicationController < ActionController::Base
       :phone_number])
   end
 #guest/deviesにカラム追加後、上記記入すればデータ保存がされる
+#データ操作の許可
 
 
 
