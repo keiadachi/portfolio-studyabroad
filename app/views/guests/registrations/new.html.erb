@@ -1,29 +1,57 @@
-<h2>Sign up</h2>
-
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= render "guests/shared/error_messages", resource: resource %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+<div class="container">  
+  <div class="row">
+    <h3 class="my-4 px-4 rounded-circle", style="background:#EEEEEE;"> 新規会員登録 </h3>
   </div>
+  <div class="row">
+    <div class="col-lg-8 offset-lg-1" >
+      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= render "guests/shared/error_messages", resource: resource %>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
+    <table class="table table-borderless">
+      <tbody>
+        <tr>
+          <th class="font-weight-normal">お名前</th>
+          <td><%= f.text_field :name, autofocus: true %></td>
+        </tr>
+        <tr>
+          <th class="font-weight-normal">メールアドレス</th>
+          <td><%= f.email_field :email, autofocus: true, autocomplete: "email" %></td>
+        </tr>
+        <tr>
+          <th class="font-weight-normal">郵便番号(ハイフンなし)</th>
+          <td><%= f.text_field :postal_code, autofocus: true %></td>
+        </tr>
+        <tr>
+          <th class="font-weight-normal">住所</th>
+          <td colspan="2"><%= f.text_field :address, autofocus: true, :size=>"50" %></td>
+        </tr>
+        <tr>
+          <th class="font-weight-normal">電話番号(ハイフンなし)</th>
+          <td><%= f.text_field :phone_number, autofocus: true %></td>
+        </tr>
+        <tr>
+          <th class="font-weight-normal">パスワード(6⽂字以上)</th>
+          <td><%= f.password_field :password, autocomplete: "new-password" %></td>
+        </tr>
+        <tr>
+          <th class="font-weight-normal">パスワード(確認⽤)</th>
+          <td><%= f.password_field :password_confirmation, autocomplete: "new-password" %></td>
+        </tr>
+        <tr>
+          <th></th>
+          <td><%= f.submit "新規登録",class: 'btn btn-success mt-2 px-5' %></td>
+        </tr>
+      </tbody>
+    </table>
+  <% end %>
   </div>
+</div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  <div class="row">
+    <h3 class="my-3 px-4 rounded-circle", style="background:#EEEEEE;">既に登録済みの方</h3>
   </div>
+  <div class="mt-3"><%= link_to "こちら", new_guest_session_path %>からログインしてください</div>
+</div>
 
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
 
-<%= render "guests/shared/links" %>
+<%#<%= render "guests/shared/links" %>
