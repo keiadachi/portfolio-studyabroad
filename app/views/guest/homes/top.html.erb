@@ -1,5 +1,13 @@
-<h1>Guest::Homes#top</h1>
-<p>Find me in app/views/guest/homes/top.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-7 offset-lg-2 mt-4" >
+        <p class="toptext">さあ、世界に飛び立つ準備をしよう！</p>
+      <div class="topimage"></div>
+    </div>
+  </div>
+</div>
+<%= render 'linkbuttom' %>
+<%= render 'company' %>
 
 
-<%= link_to "ログアウト", destroy_guest_session_path, method: :delete %>
+
