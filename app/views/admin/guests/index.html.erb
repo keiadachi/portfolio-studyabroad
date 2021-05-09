@@ -1,2 +1,46 @@
-<h1>Admin::Guests#index</h1>
-<p>Find me in app/views/admin/guests/index.html.erb</p>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-3 text-center">
+			<h2 style="background:#EEEEEE;" class="rounded-circle">会員一覧</h2>
+		</div>
+  </div>
+
+  <div class="row mt-4">
+    <table class="table table-hover text-center">
+      <thead style="background:#fffacd;">
+          <tr>
+            <th>ID</th>
+            <th>名前</th>
+            <th>メールアドレス</th>
+            <th>住所</th>
+            <th>電話番号</th>
+            <th>入会情報</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <% @guests.each do |guests| %>
+          <tr>
+            <td><%= guests.id %></td>
+              <td>
+              <%= link_to edit_admin_guest_path(guests) do %>
+              <%= guests.name %>
+              <% end %>
+              </td>
+            <td><%= guests.email %></td>
+            <td><%= guests.address %></td>
+            <td><%= guests.phone_number %></td>
+            <td>
+              <% if guests.guest_status == true %>
+              <p class="text-success">有効</p>
+              <% else %>
+              <p>退会</p>
+              <% end %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+        <%#<%= paginate @customers %>
+    </div>
+  </div>
