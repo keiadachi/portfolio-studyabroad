@@ -1,5 +1,7 @@
 class Admin::BrochuresController < ApplicationController
+  
   def index
+    @brochures = Brochures.all
   end
 
   def new
