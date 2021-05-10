@@ -12,7 +12,7 @@
 <body class="d-flex flex-column">
     <div class="wrapper">
 
-    <header class="shadow-sm">
+    <header class="header" "shadow-sm">
     <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
 
@@ -20,47 +20,47 @@
         <ul class="navbar-nav ml-auto">
         <% if guest_signed_in? %>
         <li class="nav-item">
-          <%= link_to "ログアウト", destroy_guest_session_path, method: :delete, class: 'nav-link text-dark' %>
+          <%= link_to "ログアウト", destroy_guest_session_path, method: :delete, class: 'nav-link text-white' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'About us', homes_about_path, class: 'nav-link text-dark' %>
+          <%= link_to 'About us', homes_about_path, class: 'nav-link text-white' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'マイページ', edit_guest_path(current_guest.id), class: 'nav-link text-dark' %>
+          <%= link_to 'マイページ', edit_guest_path(current_guest.id), class: 'nav-link text-white' %>
         </li>
 
         <% elsif admin_signed_in? %>
           <li>
-            <%= link_to "国一覧", admin_countries_path, class: "nav-link text-dark btn btn-outline-dark mr-2" %>
+            <%= link_to "国一覧", admin_countries_path, class: "nav-link text-white btn btn-outline-dark mr-2" %>
           </li>
           <li>
-            <%= link_to "都市一覧", admin_cities_path, class: "nav-link text-dark btn btn-outline-dark mr-2" %>
+            <%= link_to "都市一覧", admin_cities_path, class: "nav-link text-white btn btn-outline-dark mr-2" %>
           </li>
           <li>
-            <%= link_to "語学留学⼀覧", admin_schools_path, class: "nav-link text-dark btn btn-outline-dark mr-2" %>
+            <%= link_to "語学留学⼀覧", admin_schools_path, class: "nav-link text-white btn btn-outline-dark mr-2" %>
           </li>
           <li>
-            <%= link_to "パンフレット⼀覧", admin_brochures_path, class: "nav-link text-dark btn btn-outline-dark mr-2" %>
+            <%= link_to "パンフレット⼀覧", admin_brochures_path, class: "nav-link text-white btn btn-outline-dark mr-2" %>
           </li>
           <li>
-            <%= link_to "Q＆A⼀覧", admin_faqs_path, class: "nav-link text-dark btn btn-outline-dark mr-2" %>
+            <%= link_to "Q＆A⼀覧", admin_faqs_path, class: "nav-link text-white btn btn-outline-dark mr-2" %>
           </li>
           <li>
-            <%= link_to "お客様⼀覧", admin_guests_path, class: "nav-link text-dark btn btn-outline-dark mr-2" %>
+            <%= link_to "お客様⼀覧", admin_guests_path, class: "nav-link text-white btn btn-outline-dark mr-2" %>
           </li>
           <li>
-            <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link text-dark btn btn-outline-dark mr-2" %>
+            <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, class: "nav-link text-white btn btn-outline-dark mr-2" %>
           </li>
 
         <% else %>
         <li class="nav-item">
-          <%= link_to "新規登録", new_guest_registration_path, class: 'nav-link text-dark' %>
+          <%= link_to "新規登録", new_guest_registration_path, class: 'nav-link text-white' %>
         </li>
         <li class="nav-item">
-          <%= link_to "会員ログイン", guest_session_path, class: 'nav-link text-dark' %>
+          <%= link_to "会員ログイン", guest_session_path, class: 'nav-link text-white' %>
         </li>
         <li class="nav-item">
-          <%= link_to "管理者ログイン", admin_session_path, class: 'nav-link text-dark' %>
+          <%= link_to "管理者ログイン", admin_session_path, class: 'nav-link text-white' %>
         </li>
         <% end %>
         </ul>
@@ -74,7 +74,7 @@
     <%= yield %>
   </main>
 
-  <footer class="footertext">
+  <footer class="footer">
         <p>© All rights reserved by RyugakuCenter.</p>
       </footer>
 
