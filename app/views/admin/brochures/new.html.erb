@@ -1,2 +1,34 @@
-<h1>Admin::Brochures#new</h1>
-<p>Find me in app/views/admin/brochures/new.html.erb</p>
+<div class="container my-5">
+  <div class="row">
+  <div class="col-md-3 mx-auto mb-3 text-center">
+  <h3 style="background:#EEEEEE;" class="rounded-circle">パンフレット新規登録</h3>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <%= form_with model: @brochure, url:admin_brochures_path, local:true do |f| %>
+      <table class="table table-borderless">
+        <tbody>
+            <tr>
+             <td>イメージ画像</td>
+             <td><%= f.attachment_field :image %></td>
+            </tr>
+            <tr>
+              <td>タイトル</td>
+              <td><%= f.text_field :title, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>商品説明</td>
+              <td><%= f.text_area :introduction, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>
+              <%= f.submit "新規登録", class: "btn btn-success rounded-pill" %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>

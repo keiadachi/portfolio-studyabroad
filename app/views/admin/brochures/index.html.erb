@@ -10,35 +10,23 @@
       <thead style="background:#fffacd;">
           <tr>
             <th>ID</th>
-            <th>画像</th>
             <th>Title</th>
             <th>introduction</th>
           </tr>
         </thead>
-
         <tbody>
           <% @brochures.each do |brochures| %>
           <tr>
-            <td><%= guests.id %></td>
+            <td><%= brochures.id %></td>
               <td>
               <%= link_to edit_admin_brochure_path(brochures) do %>
-              <%= brochures.name %>
+              <%= brochures.title %>
               <% end %>
               </td>
-            <td><%= guests.email %></td>
-            <td><%= guests.address %></td>
-            <td><%= guests.phone_number %></td>
-            <td>
-              <% if guests.guest_status == true %>
-              <p class="text-success">有効</p>
-              <% else %>
-              <p>退会</p>
-              <% end %>
-            </td>
+            <td><%= brochures.introduction %></td>
           </tr>
           <% end %>
         </tbody>
       </table>
-        <%#<%= paginate @customers %>
     </div>
   </div>

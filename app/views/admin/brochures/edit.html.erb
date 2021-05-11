@@ -1,2 +1,29 @@
-<h1>Admin::Brochures#edit</h1>
-<p>Find me in app/views/admin/brochures/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+       <%= form_with model: @brochure, url:admin_brochure_path, local:true do |f| %>
+      <table class="table table-borderless">
+        <h2>パンフレット編集</h2>
+        <tbody>
+            <tr>
+             <td>パンフレット画像</td>
+             <td><%= f.attachment_field :image %></td>
+            </tr>
+            <tr>
+              <td>タイトル</td>
+              <td><%= f.text_field :title, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>Introduction</td>
+              <td><%= f.text_area :introduction, class: "form-control" %></td>
+            </tr>
+              <td>
+              <%= f.submit "変更を保存", class: "btn btn-success rounded-pill" %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>
