@@ -1,3 +1,33 @@
 // Place all the styles related to the guest::brochures controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.img-thumbnail {
+  width: 318px;
+  height: 300px;
+  text-align : center;
+  margin: auto ;
+  padding-top: 50px;
+}
+
+.card {
+  table-layout: fixed;
+}
+
+.card-body {
+  table-layout: fixed;
+}
+
+.card-title {
+  white-space: nowrap; //改行禁止
+  overflow: hidden; //はみ出たの隠す
+  text-overflow: ellipsis;//はみ出た分「...」
+
+}
+
+.card-text {
+  white-space: nowrap; //改行禁止
+  overflow: hidden; //はみ出たの隠す
+  text-overflow: ellipsis;//はみ出た分「...」
+}

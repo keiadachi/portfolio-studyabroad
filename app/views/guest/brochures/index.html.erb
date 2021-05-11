@@ -1,2 +1,16 @@
-<h1>Guest::Brochures#index</h1>
-<p>Find me in app/views/guest/brochures/index.html.erb</p>
+<div class="container">
+  <div class="row">
+      <% @brochures.each do |brochure| %>
+        <div class="col-md-4 mt-5">
+          <div class="card text-black bg-light border-primary" >
+            <%= attachment_image_tag brochure, :image, :fill, 150, 110, fallback: 'noimage.jpg', class: "img-thumbnail" %>
+            <div class="card-body text-center">
+              <h4 class="card-title"><%=brochure.title %></h4>
+               <p class="card-text"><%=brochure.introduction %></p>
+              <a href="#" class="btn btn-danger btn-lg">現在作成中</a>
+            </div>
+          </div>
+        </div>
+      <% end %>
+  </div>
+</div>
