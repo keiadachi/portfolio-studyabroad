@@ -7,10 +7,12 @@
             <div class="card-body text-center">
               <h4 class="card-title"><%=brochure.title %></h4>
                <p class="card-text"><%=brochure.introduction %></p>
-              <a href="#" class="btn btn-danger btn-lg">現在作成中</a>
+              <button type="button" class="btn btn-lg btn-primary" disabled="disabled">現在作成中</a>
             </div>
           </div>
         </div>
       <% end %>
   </div>
+  <%= render 'guest/homes/linkbuttom' %>
+  <%= render 'guest/homes/company' %>
 </div>

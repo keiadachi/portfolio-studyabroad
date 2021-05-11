@@ -1,2 +1,30 @@
-<h1>Admin::Faqs#new</h1>
-<p>Find me in app/views/admin/faqs/new.html.erb</p>
+<div class="container my-5">
+  <div class="row">
+  <div class="col-md-3 mx-auto mb-3 text-center">
+  <h3 style="background:#EEEEEE;" class="rounded-circle">Q＆Aの新規登録</h3>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <%= form_with model: @faq, url:admin_faqs_path, local:true do |f| %>
+      <table class="table table-borderless">
+        <tbody>
+            <tr>
+              <td>Question</td>
+              <td><%= f.text_area :question, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>Answer</td>
+              <td><%= f.text_area :answer, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>
+              <%= f.submit "新規登録", class: "btn btn-success rounded-pill" %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>

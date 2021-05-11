@@ -1,2 +1,25 @@
-<h1>Admin::Faqs#edit</h1>
-<p>Find me in app/views/admin/faqs/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+       <%= form_with model: @faq, url:admin_faq_path, local:true do |f| %>
+      <table class="table table-borderless">
+        <h2>Q＆A編集</h2>
+        <tbody>
+            <tr>
+              <td>Question</td>
+              <td><%= f.text_area :question, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>Answer</td>
+              <td><%= f.text_area :answer, class: "form-control" %></td>
+            </tr>
+              <td>
+              <%= f.submit "変更を保存", class: "btn btn-success rounded-pill" %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>
