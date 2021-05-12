@@ -1,2 +1,42 @@
-<h1>Admin::Countries#index</h1>
-<p>Find me in app/views/admin/countries/index.html.erb</p>
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-3 text-center">
+			<h2 style="background:#EEEEEE;" class="rounded-circle">国情報の一覧</h2>
+		</div>
+  </div>
+
+<div class="row text-right">
+    <%= link_to "+", new_admin_country_path, class: "btn-danger btn-outline-light btn-lg rounded-circle text-right ml-auto shadow-sm" %>
+  </div>
+
+  <div class="row mt-4">
+    <table class="table table-hover text-center">
+      <thead style="background:#fffacd;">
+          <tr>
+            <th>ID</th>
+            <th>国名</th>
+            <th>首都</th>
+            <th>人口</th>
+            <th>言語</th>
+            <th>通貨</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @countries.each do |countries| %>
+          <tr>
+            <td><%= countries.id %></td>
+              <td>
+              <%= link_to edit_admin_country_path(countries) do %>
+              <%= countries.country_name %>
+              <% end %>
+              </td>
+              <td><%= countries.capital %></td>
+              <td><%= countries.country_population %></td>
+              <td><%= countries.language %></td>
+              <td><%= countries.currency %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>

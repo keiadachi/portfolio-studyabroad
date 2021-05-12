@@ -1,2 +1,41 @@
-<h1>Admin::Countries#edit</h1>
-<p>Find me in app/views/admin/countries/edit.html.erb</p>
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+       <%= form_with model: @country, url:admin_country_path, local:true do |f| %>
+      <table class="table table-borderless">
+        <h2>国の編集</h2>
+        <tbody>
+            <tr>
+             <td>国の画像</td>
+             <td><%= f.attachment_field :image %></td>
+            </tr>
+            <tr>
+              <td>国名</td>
+              <td><%= f.text_area :country_name, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>首都</td>
+              <td><%= f.text_area :capital, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>人口</td>
+              <td><%= f.text_area :country_population, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>言語</td>
+              <td><%= f.text_area :language, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>通貨</td>
+              <td><%= f.text_area :currency, class: "form-control" %></td>
+            </tr>
+              <td>
+              <%= f.submit "変更を保存", class: "btn btn-success rounded-pill" %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>

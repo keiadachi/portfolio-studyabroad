@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_10_213346) do
+ActiveRecord::Schema.define(version: 2021_05_12_055153) do
 
   create_table "admins", force: :cascade do |t|
     t.string "email", default: "", null: false
@@ -47,7 +47,7 @@ ActiveRecord::Schema.define(version: 2021_05_10_213346) do
   create_table "countries", force: :cascade do |t|
     t.string "country_name"
     t.string "capital"
-    t.integer "country_population"
+    t.string "country_population"
     t.string "language"
     t.string "currency"
     t.string "image_id"

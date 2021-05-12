@@ -1,2 +1,47 @@
-<h1>Admin::Countries#new</h1>
-<p>Find me in app/views/admin/countries/new.html.erb</p>
+<div class="container my-5">
+  <div class="row">
+  <div class="col-md-3 mx-auto mb-3 text-center">
+  <h3 style="background:#EEEEEE;" class="rounded-circle">国の新規登録</h3>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <%= form_with model: @country, url:admin_countries_path, local:true do |f| %>
+      <table class="table table-borderless">
+        <tbody>
+            <tr>
+             <td>イメージ画像</td>
+             <td><%= f.attachment_field :image %></td>
+            </tr>
+            <tr>
+              <td>国名</td>
+              <td><%= f.text_field :country_name, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>首都</td>
+              <td><%= f.text_field :capital, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>人口(人)</td>
+              <td><%= f.text_field :country_population, class: "form-control" %></td>
+            </tr>
+             <!--numberfieldだと多い分大変-->
+            <tr>
+              <td>言語</td>
+              <td><%= f.text_field :language, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>通貨</td>
+              <td><%= f.text_field :currency, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>
+              <%= f.submit "新規登録", class: "btn btn-success rounded-pill" %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>
