@@ -4,8 +4,6 @@ class School < ApplicationRecord
   #attachment_fieldを使用する際に必要　カラム名image_id
 
   belongs_to :country
-  belongs_to :city
-
-
+  #belongs_to :city
 
 end

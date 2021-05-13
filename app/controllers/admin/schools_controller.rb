@@ -1,9 +1,10 @@
 class Admin::SchoolsController < ApplicationController
   def index
+    @schools = School.all
   end
 
   def new
-    @schools = School.new
+    @school = School.new
     @countries = Country.all
   end
 
@@ -14,8 +15,10 @@ class Admin::SchoolsController < ApplicationController
   end
 
   def create
-    @schools = School.new
-    if @schools.new(school_params)
+    @school = School.new(school_params)
+    #@countries = Country.all
+      #binding.pry
+    if @school.save
       redirect_to admin_schools_path
     else
       render :new
@@ -24,11 +27,11 @@ class Admin::SchoolsController < ApplicationController
 
   def update
   end
-  
+
   private
   def school_params
-    params.require(:school).permit(:country_id, :city_id, :school_name, :course_name, 
-    :introduction, :stay, :nationality, :image_id)
+    params.require(:school).permit(:country_id, :city_id, :school_name, :course_name,
+    :introduction, :stay, :nationality, :image)
   end
-  
+
 end
