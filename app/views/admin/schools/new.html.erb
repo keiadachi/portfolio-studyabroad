@@ -1,2 +1,51 @@
-<h1>Admin::Schools#new</h1>
-<p>Find me in app/views/admin/schools/new.html.erb</p>
+<div class="container my-5">
+  <div class="row">
+  <div class="col-md-3 mx-auto mb-3 text-center">
+  <h3 style="background:#EEEEEE;" class="rounded-circle">商品新規登録</h3>
+  </div>
+  </div>
+  <div class="row">
+    <div class="col-md-8 mx-auto">
+      <%= form_with model: @schools, url:admin_schools_path, local:true do |f| %>
+      <table class="table table-borderless">
+            <tr>
+             <td>語学学校画像</td>
+             <td><%= f.attachment_field :image %></td>
+            </tr>
+            <tr>
+              <td>語学学校名</td>
+              <td><%= f.text_field :school_name, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>コース名</td>
+              <td><%= f.text_field :course_name, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>紹介</td>
+              <td><%= f.text_area :introduction, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>滞在方法</td>
+              <td><%= f.text_field :stay, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>国籍</td>
+              <td><%= f.text_field :nationality, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>ジャンル</td>
+              <td>  <%= f.collection_select(:country_id, @countries, :id, :country_name, prompt: "-- 選択してください --", class: "col-sm-9 genre_id") %>
+              <!--f.collection_select(メソッド名, オブジェクトの配列, value属性の項目, テキストの項目 [, オプション or HTML属性 or イベント属性])-->
+              </td>
+            </tr>
+            <tr>
+              <td>
+              <%= f.submit "新規登録", class: "btn btn-success rounded-pill" %>
+              </td>
+            </tr>
+        </tbody>
+      </table>
+      <% end %>
+    </div>
+  </div>
+</div>
