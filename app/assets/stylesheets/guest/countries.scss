@@ -2,18 +2,46 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.h3 {
+  margin-left: 110px ;
+  margin-top: 10px;
+
+  position: relative;
+  background: #f1f8ff;
+  padding: 0.25em 0.5em;
+  border-left: solid 2em #5c9ee7;
+  border-radius: 8px; /* 半径が8pxの角丸 */
+}
+
+h3:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f303";
+  position: absolute;
+  padding: 0em;
+  color: white;
+  font-weight: 900;
+  left: -1.35em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
 .contents_header {
   width: 900px;
   height: 180px;
   background-color: #f5587b;
+  border-radius: 8px; /* 半径が8pxの角丸 */
 }
 
-.contents_text {
-  margin-bottom: px;
-  border: solid;
-  border-color: black;
-  // コンテンツ内テキストが上がらない
-}
+// .contents_text {
+//   display:  inline-block;
+//   width: 150px;
+//   margin-bottom: 30px;
+//   border: solid;
+//   border-color: black;
+//   // コンテンツ内テキストが上がらない
+// }
 
 .country_schoolimage {
   width: 250px;
@@ -21,7 +49,7 @@
   border: solid;
   border-color: white;
   // margin: 0 10px 0 30px;
-  margin-bottom: 120px;
+  margin-bottom: 130px;
   margin-left: 15px;
   border-radius: 8px; /* 半径が8pxの角丸 */
 }
@@ -30,12 +58,14 @@
   display:  inline-block;     /* インラインブロック要素にする */
   // width: 150px;               /* 幅指定 */
   color: white;
-  margin-left: 175px;
-  margin-top: 35px;
-  border: solid;
-  border-color: white;
-  font-size: 20px;
+  margin-left: 25px;
+  margin-top: 15px;
+  font-size: 17px;
+  width: 400px;
+}
 
+li {
+  text-indent: 1em;
 }
 
 .country_introduction {
@@ -60,6 +90,7 @@
   vertical-align: middle;
   font-weight: bold;
   text-align: center;
+  font-size: 18px;
 }
 
 .country_td {
@@ -69,6 +100,7 @@
   vertical-align: top;
   text-align: left;
   background-color: #F5F7FA;
+  font-size: 15px;
 }
 @media all and (max-width: 767px) {
   .country_th, .country_td {
@@ -81,6 +113,55 @@
   }
 }
 
-.school_name {
-  width: 50px;
+
+// 以下coutry/index
+
+.img-thumbnail {
+  width: 318px;
+  height: 300px;
+  text-align : center;
+  margin: auto ;
+  padding-top: 50px;
 }
+
+.card {
+  table-layout: fixed;
+}
+
+.card-body {
+  table-layout: fixed;
+}
+
+.card-title {
+  white-space: nowrap; //改行禁止
+  overflow: hidden; //はみ出たの隠す
+  text-overflow: ellipsis;//はみ出た分「...」
+
+}
+
+.card-text {
+  white-space: nowrap; //改行禁止
+  overflow: hidden; //はみ出たの隠す
+  text-overflow: ellipsis;//はみ出た分「...」
+}
+
+.btn-square-pop {
+  position: relative;
+  display: inline-block;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #FFF;
+  background: #fd9535;/*背景色*/
+  border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+  border-radius: 4px;/*角の丸み*/
+  box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+  font-weight: bold;
+}
+
+.btn-square-pop:active {
+  border-bottom: solid 2px #fd9535;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+}
+
+
+// ここまで

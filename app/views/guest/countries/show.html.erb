@@ -1,11 +1,11 @@
 <div class="container">
-
   <div class="row">
-    <div class="col-lg-9 offset-lg-1 mt-5" >
+      <h3 class="h3"><%= @country.country_name %>と語学学校について</h3>
+    <div class="col-lg-9 offset-lg-1 mt-3" >
       <div class="contents_header">
         <%= attachment_image_tag @country, :image, fallback: 'noimage.jpg', class: "country_schoolimage" %>
-        <font color="white" size="5" class="contents_text"><b><%= @country.country_name %></b></font>
-          <div class="countryinfo">
+        <div class="countryinfo">
+        <font color="white" size="6" class="contents_text"><b><%= @country.country_name %></b></font>
             <li>都市：<%= @country.capital %></li>
             <li>人口：<%= @country.country_population %>人</li>
             <li>言語：<%= @country.language %></li>
