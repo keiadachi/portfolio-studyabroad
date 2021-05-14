@@ -1,2 +1,38 @@
-<h1>Guest::Countries#show</h1>
-<p>Find me in app/views/guest/countries/show.html.erb</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-9 offset-lg-1 mt-5" >
+      <div class="contents_header">
+        <%= attachment_image_tag @country, :image, fallback: 'noimage.jpg', class: "country_schoolimage" %>
+        <font color="white" size="5" class="contents_text"><b><%= @country.country_name %></b></font>
+          <div class="countryinfo">
+            <li>都市：<%= @country.capital %></li>
+            <li>人口：<%= @country.country_population %>人</li>
+            <li>言語：<%= @country.language %></li>
+            <li>通貨：<%= @country.currency %></li>
+          </div>
+      </div>
+      <div class="country_introduction">
+        <%= @country.introduction %>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1 mt-4" >
+      <table class="contry_table">
+        <% @country.schools.each do |school| %>
+        <tr class="country_tr">
+            <th class="country_th">
+              <%= link_to country_school_path(school) do %>
+              <%= school.school_name%>
+              <% end %>
+              </th>
+            <td class="country_td"><%= school.introduction%></td>
+          <% end %>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+</div>

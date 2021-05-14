@@ -11,23 +11,27 @@
             </tr>
             <tr>
               <td>国名</td>
-              <td><%= f.text_area :country_name, class: "form-control" %></td>
+              <td><%= f.text_field :country_name, class: "form-control" %></td>
             </tr>
             <tr>
               <td>首都</td>
-              <td><%= f.text_area :capital, class: "form-control" %></td>
+              <td><%= f.text_field :capital, class: "form-control" %></td>
             </tr>
             <tr>
               <td>人口</td>
-              <td><%= f.text_area :country_population, class: "form-control" %></td>
+              <td><%= f.text_field :country_population, class: "form-control" %></td>
             </tr>
             <tr>
               <td>言語</td>
-              <td><%= f.text_area :language, class: "form-control" %></td>
+              <td><%= f.text_field :language, class: "form-control" %></td>
             </tr>
             <tr>
               <td>通貨</td>
-              <td><%= f.text_area :currency, class: "form-control" %></td>
+              <td><%= f.text_field :currency, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>説明</td>
+              <td><%= f.text_area :introduction, class: "form-control" %></td>
             </tr>
               <td>
               <%= f.submit "変更を保存", class: "btn btn-success rounded-pill" %>

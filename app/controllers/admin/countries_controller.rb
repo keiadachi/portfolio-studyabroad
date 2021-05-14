@@ -35,7 +35,7 @@ class Admin::CountriesController < ApplicationController
   private
   def country_params
     params.require(:country).permit(:country_name, :capital, :country_population, :language,
-    :currency, :image)
+    :currency, :image, :introduction)
   end
 
 end

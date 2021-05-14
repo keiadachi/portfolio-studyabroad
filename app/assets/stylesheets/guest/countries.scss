@@ -1,3 +1,85 @@
 // Place all the styles related to the guest::countries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.contents_header {
+  width: 900px;
+  height: 180px;
+  background-color: #f5587b;
+}
+
+.contents_text {
+  margin-bottom: px;
+  border: solid;
+  border-color: black;
+  // コンテンツ内テキストが上がらない
+}
+
+.country_schoolimage {
+  width: 250px;
+  height: 150px;
+  border: solid;
+  border-color: white;
+  // margin: 0 10px 0 30px;
+  margin-bottom: 120px;
+  margin-left: 15px;
+  border-radius: 8px; /* 半径が8pxの角丸 */
+}
+
+.countryinfo {
+  display:  inline-block;     /* インラインブロック要素にする */
+  // width: 150px;               /* 幅指定 */
+  color: white;
+  margin-left: 175px;
+  margin-top: 35px;
+  border: solid;
+  border-color: white;
+  font-size: 20px;
+}
+
+.country_introduction {
+  margin-top: 10px;
+
+}
+
+.contry_table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+
+}
+
+.country_th {
+  width: 22%;
+  background: #fff27d;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 15px;
+  vertical-align: middle;
+  font-weight: bold;
+  text-align: center;
+}
+
+.country_td {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 50px;
+  vertical-align: top;
+  text-align: left;
+  background-color: #F5F7FA;
+}
+@media all and (max-width: 767px) {
+  .country_th, .country_td {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+  }
+  .country_tr:last-child .country_td:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+.school_name {
+  width: 50px;
+}
