@@ -1,3 +1,87 @@
 // Place all the styles related to the guest::schools controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+
+.school_name {
+  font-size: 30px;
+  width: 80%;
+  font-weight: bold;
+}
+
+.hr {
+  margin-right: 20px;
+  height: 1px;
+}
+
+.country_header {
+  width: 900px;
+  height: 200px;
+  display: flex;
+  // 画像とテキスト横並び
+  background-color: #f5587b;
+}
+
+
+.school_image {
+  width: 320px;
+  height: 190px;
+  border: solid;
+  border-color: white;
+  // margin: 0 10px 0 30px;
+  margin-top: 5px;
+  margin-left: 5px;
+  border-radius: 8px; /* 半径が8pxの角丸 */
+}
+
+.school_introduction {
+  border: solid;
+  border-color: black;
+  font-size: 15px;
+  word-wrap: break-all;
+  // 折り返し
+  width: 600px;
+  margin-top: 30px;
+  margin-left: 30px;
+}
+
+.school_table {
+  width: 98%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 14px;
+
+}
+
+.school_th {
+  width: 22%;
+  background: #fff27d;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 15px;
+  vertical-align: middle;
+  font-weight: bold;
+  text-align: center;
+  font-size: 20px;
+}
+
+.school_td {
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 50px;
+  vertical-align: top;
+  text-align: left;
+  background-color: #F5F7FA;
+  font-size: 15px;
+}
+@media all and (max-width: 767px) {
+  .school_th, .school_td {
+    display: block;
+    width: 100%;
+    border-bottom: none;
+  }
+  .school_tr:last-child .school_td:last-child {
+    border-bottom: 1px solid #ccc;
+  }
+}

@@ -1,0 +1,45 @@
+<div class="container">
+
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1 mt-3" >
+      <p class="school_name"><%= @school.school_name %></p>
+      <hr color="#ff0000" width="98%" class="hr">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-11 offset-lg-1 mt-1" >
+      <div class="country_header">
+        <%= attachment_image_tag @school, :image, fallback: 'noimage.jpg', class: "school_image" %>
+        <p class="school_introduction"><%= @school.introduction %></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1 mt-4" >
+      <table class="school_table">
+        <tr class="school_tr">
+          <th class="school_th">コース名</th>
+          <td class="school_td"><%= @school.school_name %></td>
+        </tr>
+        <tr class="school_tr">
+          <th class="school_th">コース紹介</th>
+          <td class="school_td"><%= @school.introduction %></td>
+        </tr>
+        <tr class="school_tr">
+          <th class="school_th">滞在方法</th>
+          <td class="school_td"><%= @school.stay %></td>
+        </tr>
+        <tr class="school_tr">
+          <th class="school_th">学生の国籍</th>
+          <td class="school_td"><%= @school.nationality %></td>
+        </tr>
+
+
+
+      </table>
+    </div>
+  </div>
+
+</div>
