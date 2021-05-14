@@ -1,12 +1,12 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-9 mt-3" >
-    <h3 class="h3">気になる国から探してみよう！</h3>
+    <div class="col-lg-6 mt-3" >
+    <h3 class="h3index">気になる国から探してみよう！</h3>
     </div>
   </div>
   <div class="row">
       <% @country.each do |country| %>
-        <div class="col-md-4 mt-5">
+        <div class="col-md-4 mt-3">
           <div class="card text-black bg-light border-primary" >
             <%= attachment_image_tag country, :image, :fill, 150, 110, fallback: 'noimage.jpg', class: "img-thumbnail" %>
             <div class="card-body text-center">

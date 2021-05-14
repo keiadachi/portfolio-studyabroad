@@ -116,6 +116,31 @@ li {
 
 // 以下coutry/index
 
+.h3index {
+  margin-top: 10px;
+  position: relative;
+  background: #f1f8ff;
+  padding: 0.25em 0.5em;
+  border-left: solid 2em #5c9ee7;
+  border-radius: 8px; /* 半径が8pxの角丸 */
+}
+
+h3index:before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f303";
+  position: absolute;
+  padding: 0em;
+  color: white;
+  font-weight: 900;
+  left: -1.35em;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+
+
+
 .img-thumbnail {
   width: 318px;
   height: 300px;
@@ -162,6 +187,5 @@ li {
   border-bottom: solid 2px #fd9535;
   box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
 }
-
 
 // ここまで
