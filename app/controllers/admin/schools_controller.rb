@@ -1,7 +1,8 @@
 class Admin::SchoolsController < ApplicationController
-  
+
   def index
-    @schools = School.all
+    @schools = School.all.order("country_id")
+    # 国名でソート
   end
 
   def new

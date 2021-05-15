@@ -14,6 +14,7 @@ Rails.application.routes.draw do
     resources :countries, only: [:index, :show] do
       resources :schools, only: [:index, :show]
     end
+    # railsroutesを確認すると
     # 国の一覧ページに国id別の語学学校詳細(show)のリンクを表示させるため
     resources :cities, only: [:index, :show]
     resources :maps

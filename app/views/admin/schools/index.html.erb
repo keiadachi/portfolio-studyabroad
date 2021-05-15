@@ -15,11 +15,7 @@
           <tr>
             <th>ID</th>
             <th>語学学校名</th>
-            <th>コース名</th>
-            <th>紹介</th>
-            <th>滞在方法</th>
-            <th>国籍</th>
-            <th>ジャンル</th>
+            <th>対象国</th>
           </tr>
         </thead>
         <tbody>
@@ -31,10 +27,6 @@
               <%= schools.school_name %>
               <% end %>
               </td>
-            <td><%= schools.course_name %></td>
-            <td><%= schools.introduction %></td>
-            <td><%= schools.stay %></td>
-            <td><%= schools.nationality %></td>
             <td><%= schools.country.country_name %></td>
           </tr>
           <% end %>

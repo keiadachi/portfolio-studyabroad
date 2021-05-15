@@ -24,9 +24,7 @@
         <% @country.schools.each do |school| %>
         <tr class="country_tr">
             <th class="country_th">
-            <%#<% @school.each do |schools| %>
-              <%= link_to country_school_path(school) do %>
-            <%#<% end %>
+              <%= link_to country_school_path(@country, school) do %>
               <%= school.school_name%>
               <% end %>
               </th>

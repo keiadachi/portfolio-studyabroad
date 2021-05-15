@@ -7,7 +7,7 @@ class Guest::CountriesController < ApplicationController
   def show
     #@countries = Country.all
     @country = Country.find(params[:id])
-    #@school = @country.schools
+    @school = @country.schools
   end
 
   private
