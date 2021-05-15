@@ -104,6 +104,7 @@ ActiveRecord::Schema.define(version: 2021_05_14_070501) do
     t.datetime "updated_at", null: false
     t.string "image_id"
     t.integer "country_id"
+    t.text "course_introduction"
   end
 
 end

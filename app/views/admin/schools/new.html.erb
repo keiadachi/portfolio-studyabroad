@@ -22,7 +22,7 @@
               <td><%= f.text_field :course_name, class: "form-control" %></td>
             </tr>
             <tr>
-              <td>紹介</td>
+              <td>学校紹介</td>
               <td><%= f.text_area :introduction, class: "form-control" %></td>
             </tr>
             <tr>
@@ -34,7 +34,11 @@
               <td><%= f.text_field :nationality, class: "form-control" %></td>
             </tr>
             <tr>
-              <td>ジャンル</td>
+              <td>コース紹介</td>
+              <td><%= f.text_area :course_introduction, class: "form-control" %></td>
+            </tr>
+            <tr>
+              <td>所在国</td>
               <td><%= f.collection_select(:country_id, @countries, :id, :country_name, prompt: "-- 選択してください --", class: "col-sm-9 genre_id") %>
               </td>
               <!--f.collection_select(メソッド名, オブジェクトの配列, value属性の項目, テキストの項目 [, オプション or HTML属性 or イベント属性])-->
