@@ -70,3 +70,8 @@ gem 'font-awesome-sass', '~> 5.13'
 
 gem 'devise'
 gem 'pry-rails'
+
+gem "geocoder"
+gem 'gon'
+
+gem 'dotenv-rails'
