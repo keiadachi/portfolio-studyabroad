@@ -7,7 +7,10 @@ Rails.application.routes.draw do
     root to: 'homes#top'
      get 'homes/about'
     resources :guests, only: [:edit, :update]
-    resources :contacts, only: [:index]
+    resources :contacts, only: [:new, :create]
+      post 'contacts/confirm', to: 'contacts#confirm', as: 'confirm'
+      post 'contacts/back', to: 'contacts#back', as: 'back'
+      get 'done', to: 'contacts#done', as: 'done'
     resources :faqs, only: [:index]
     resources :consultations, only: [:index]
     resources :brochures, only: [:index]
