@@ -23,18 +23,43 @@
 =====================================*/
 
 main {
-  background-color: #fff1c1;
   min-height: calc(100vh - 7rem);
-
+  padding: 50px;
 }
 
 .wrap {
   overflow: hidden;
 }
 
+main h1 {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+/*=====================================
+ 背景色
+=====================================*/
+
+.bg_pattern {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ffffff;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.Polka {
+  background-image: radial-gradient(#fce014 2px, #51c1f0 2px);
+  background-size: 20px 20px;
+}
 
 /*============
-nav
+nav ヘッダー関連
 =============*/
 nav {
   display: block;
@@ -84,7 +109,7 @@ nav .inner ul li a:hover {
   }
 }
 /*============
-@keyframes
+@keyframes　ヘッダー関連
 =============*/
 @keyframes equalizer01 {
   0% {
@@ -157,7 +182,7 @@ nav .inner ul li a:hover {
   }
 }
 /*============
-.toggle_btn
+.toggle_btn　ヘッダー関連
 =============*/
 .toggle_btn {
   display: block;
@@ -221,7 +246,7 @@ nav .inner ul li a:hover {
   }
 }
 /*============
-#mask
+#mask　ヘッダー関連
 =============*/
 #mask {
   display: none;
@@ -239,17 +264,7 @@ nav .inner ul li a:hover {
   cursor: pointer;
   transition: all .5s;
 }
-/*============
-main
-=============*/
-main {
-  padding: 50px;
-}
-main h1 {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  text-align: center;
-}
+
 /*============
 body
 =============*/
@@ -257,6 +272,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
 }
+
 
 /*=====================================
  footer

@@ -3,8 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .topimage {
-  height: 350px;
-  width: 500px;
+  height: 460px;
   background-image: image-url("topimage.jpg");
   background-size: cover;
   // border: outset 5px #900;
@@ -13,14 +12,29 @@
 }
 
 .toptext {
-  font-size: 30px;
   height: 150px;
   line-height: 30px;
-  width: 600px;
   color: black;
   margin: 0 auto;
   padding-top: 50px;
   text-shadow: 1px 2px 3px #808080;
+  // 以下h1デザイン
+    display: inline-block;
+    position: relative;
+    margin: 1em auto;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    padding: 0 15px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #FFF;
+    box-sizing: border-box;
+    background-color: #F09E32;
+    background-image: radial-gradient(#EE8E15 10%, transparent 20% ), radial-gradient(#EE8E15 10%, transparent 20% );
+    background-position: 0 0, 10px 10px;
+    background-size: 20px 20px;
+    width: 100%;
 }
 
 .button {
