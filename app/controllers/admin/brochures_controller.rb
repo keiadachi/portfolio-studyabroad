@@ -1,5 +1,7 @@
 class Admin::BrochuresController < ApplicationController
 
+  before_action :authenticate_admin!
+
   def index
     @brochures = Brochure.all
   end

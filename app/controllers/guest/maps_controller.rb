@@ -1,5 +1,9 @@
 class Guest::MapsController < ApplicationController
 
+  before_action :authenticate_guest!
+  before_action :authenticate_admin!
+
+
   def new
     # @map = Map.new
   end

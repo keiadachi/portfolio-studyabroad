@@ -1,4 +1,7 @@
 class Admin::CountriesController < ApplicationController
+  
+  before_action :authenticate_admin!
+  
   def index
     @countries = Country.all
   end

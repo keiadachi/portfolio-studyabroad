@@ -1,5 +1,8 @@
 class Guest::ContactsController < ApplicationController
 
+  before_action :authenticate_guest!
+  before_action :authenticate_admin!
+
   def new
     @contact = Contact.new
   end

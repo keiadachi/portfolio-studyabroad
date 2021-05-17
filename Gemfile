@@ -75,3 +75,6 @@ gem "geocoder"
 gem 'gon'
 
 gem 'dotenv-rails'
+
+gem 'rails-i18n'
+#バリデーション日本語化

@@ -1,5 +1,8 @@
 class Guest::CountriesController < ApplicationController
 
+  before_action :authenticate_guest!
+  before_action :authenticate_admin!
+
   def index
     @country = Country.all
   end

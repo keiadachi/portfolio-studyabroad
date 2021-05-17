@@ -1,4 +1,8 @@
 class Guest::BrochuresController < ApplicationController
+
+  before_action :authenticate_guest!
+  before_action :authenticate_admin!
+
   def index
     @brochures = Brochure.all
   # descは降順。大きい方から並べること
