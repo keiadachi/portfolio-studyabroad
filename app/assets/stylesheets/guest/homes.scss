@@ -45,16 +45,46 @@
     border-radius: 10px;/*角の丸み*/
 }
 
+
+/*=====================================
+ about
+=====================================*/
+
+.abouttext {
+  text-align:center;
+  font-size: 30px;
+  height: 50px;
+  color: white;
+  margin: 0 auto;
+  padding-top: 30px;
+  text-shadow: 1px 2px 3px #808080;
+}
+
+.aboutimage {
+  margin-left: 100px;
+  height: 600px;
+  width: 300;
+  background-image: image-url('aboutimage.jpg');
+  background-size: cover;
+  border: outset 5px #900;
+}
+
+/*=====================================
+ render linkbottom company
+=====================================*/
+
+
 // 語学留学パンフレットQ＆Aボタン
 
 .footerbutton {
-  font-size: 30px;
+  font-size: 28px;
+  margin-left: 130px;
   // line-height: 30px;
   // width: 100%;
 }
 
 .footerbuttontext {
-  color: #F79D2D;
+    color: #F79D2D;
     padding: 5px;
     // margin: 2em 0;
     font-weight: bold;
@@ -80,7 +110,6 @@
   border-bottom: solid 3px #d7d7d7;/*下線*/
 }
 
-
 .companytext {
   // border: solid;
   text-shadow: 1px 2px 3px #808080;
@@ -92,45 +121,4 @@
 
 .googleMap {
   margin-right: 50px;
-}
-
-
-
-/*=====================================
- top
-=====================================*/
-
-.abouttext {
-  font-size: 25px;
-  height: 150px;
-  line-height: 30px;
-  width: 420px;
-  color: white;
-  margin: 0 auto;
-  padding-top: 80px;
-  text-shadow: 1px 2px 3px #808080;
-}
-
-.aboutimage {
-  height: 350px;
-  width: 500px;
-  background-image: image-url('aboutimage.jpg');
-  background-size: cover;
-  border: outset 5px #900;
-}
-
-.footerbutton {
-  margin-left: 230px;
-}
-
-.btn btn-primary {
-  font-size: 20px;
-  width: 30px;
-  height: 30px;
-}
-
-
-.googleMap {
-  height: 300px;
-  width: 450px;
 }

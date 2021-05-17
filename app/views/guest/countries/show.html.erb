@@ -24,8 +24,8 @@
         <% @country.schools.each do |school| %>
         <tr class="country_tr">
             <th class="country_th">
-              <%= link_to country_school_path(@country, school) do %>
-              <%= school.school_name%>
+              <%= link_to country_school_path(@country, school), data: {"turbolinks" => false} do %>
+              <%= school.school_name %>
               <% end %>
               </th>
             <td class="country_td"><%= school.introduction%></td>
