@@ -16,5 +16,12 @@ class Guest < ApplicationRecord
   validates :address, presence: true
   validates :phone_number, presence: true
 
+  def self.user
+    find_or_create_by!(name: 'guest', email: 'guest@example.com', postal_code: '0000000',
+    address: '東京都豊島区東池袋', phone_number: '09000000000' ) do |guest|
+      guest.password = SecureRandom.urlsafe_base64
+      # 新規登録に必要なカラムをすべて登録
+    end
+  end
 
 end

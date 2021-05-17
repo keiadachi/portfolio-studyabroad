@@ -1,0 +1,87 @@
+<header class="header" "shadow-sm">
+      <div class="container">
+
+      <div id="navArea">
+        <nav>
+          <div class="inner">
+
+        <ul class="navbar-nav ml-auto">
+        <% if guest_signed_in? %>
+        <li class="nav-item">
+          <%= link_to "" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "ログアウト", destroy_guest_session_path, data: {"turbolinks" => false}, method: :delete, class: 'nav-link text-black' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "TOP", root_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'About us', homes_about_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'マイページ', edit_guest_path(current_guest.id), data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'お問い合わせ', new_contact_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+
+        <% elsif admin_signed_in? %>
+          <li class="nav-item">
+            <%= link_to "" %>
+          </li>
+          <li>
+            <%= link_to "国一覧", admin_countries_path, data: {"turbolinks" => false}, class: "nav-link text-black" %>
+          </li>
+          <li>
+            <%= link_to "語学留学⼀覧", admin_schools_path, data: {"turbolinks" => false}, class: "nav-link text-black" %>
+          </li>
+          <li>
+            <%= link_to "パンフレット⼀覧", admin_brochures_path, data: {"turbolinks" => false}, class: "nav-link text-black" %>
+          </li>
+          <li>
+            <%= link_to "Q＆A⼀覧", admin_faqs_path, data: {"turbolinks" => false}, class: "nav-link text-black" %>
+          </li>
+          <li>
+            <%= link_to "お客様⼀覧", admin_guests_path, data: {"turbolinks" => false}, class: "nav-link text-black" %>
+          </li>
+          <li>
+            <%= link_to "ログアウト", destroy_admin_session_path, method: :delete, data: {"turbolinks" => false}, class: "nav-link text-black" %>
+          </li>
+
+        <% else %>
+        <li class="nav-item">
+          <%= link_to "" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'About us', homes_about_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "新規登録", new_guest_registration_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "お客様ログイン", guest_session_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "管理者ログイン(パスあり)", admin_session_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'ゲストログイン（お客様のみ）', guests_user_sign_in_path, method: :post, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+        <% end %>
+        </ul>
+      </div>
+        </nav>
+      </div>
+    </div>
+    
+    <div class="toggle_btn">
+    <span></span>
+    <span></span>
+    <span></span>
+    </div>
+
+    <div id="mask"></div>
+
+</div>
+</header>

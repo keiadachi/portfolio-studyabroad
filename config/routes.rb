@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
 
   devise_for :guests
+  devise_scope :guest do
+    post 'guests/user_sign_in', to: 'guests/sessions#user_sign_in'
+  end
+
   devise_for :admins
 
   scope module: :guest do

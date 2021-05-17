@@ -78,3 +78,5 @@ gem 'dotenv-rails'
 
 gem 'rails-i18n'
 #バリデーション日本語化
+
+gem 'jquery-turbolinks'
