@@ -1,7 +1,6 @@
 class Guest::GuestsController < ApplicationController
 
   before_action :authenticate_guest!
-  before_action :authenticate_admin!
 
   def show
   end

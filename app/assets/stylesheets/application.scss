@@ -18,18 +18,39 @@
 @import 'font-awesome';
 
 
+/*=====================================
+ main
+=====================================*/
+
 main {
   background-color: #fff1c1;
+  min-height: calc(100vh - 7rem);
+
+}
+
+.wrap {
+  overflow: hidden;
 }
 
 
-.header {
+/*=====================================
+ header
+=====================================*/
 
-  background-color: #293462;
+header{
+   width: 100%;
+   background-color: #293462;
+}
+
+.nav-item{
+   padding: 10px 20px;
 }
 
 
+/*=====================================
+ footer
+=====================================*/
 footer{
-  margin-top: auto;
-  background-color: #fff1c1;
+   margin-top: auto;
+   background-color: #293462;
 }

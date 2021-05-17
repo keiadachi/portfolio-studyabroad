@@ -1,7 +1,6 @@
 class Guest::SchoolsController < ApplicationController
 
   before_action :authenticate_guest!
-  before_action :authenticate_admin!
 
   def show
     @school = School.find(params[:id])
