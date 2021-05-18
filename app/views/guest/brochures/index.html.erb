@@ -1,5 +1,11 @@
 <div class="container">
   <div class="row">
+    <div class="col-lg-8 offset-lg-2">
+    <h1 class="brochureh1">　＼　パンフレットから探そう！　／</h1>
+    </div>
+  </div>
+
+  <div class="row">
       <% @brochures.each do |brochure| %>
         <div class="col-md-4 mt-5">
           <div class="card text-black bg-light border-primary" >
@@ -7,7 +13,8 @@
             <div class="card-body text-center">
               <h4 class="card-title"><%=brochure.title %></h4>
                <p class="card-text"><%=brochure.introduction %></p>
-              <button type="button" class="btn btn-lg btn-primary" disabled="disabled">現在作成中</a>
+              <!--<button type="button" class="btn btn-lg btn-primary" disabled="disabled">現在作成中</a>-->
+              <a href="https://www.jtb.co.jp/jtbglobal/pamphlet/" class="btn btn-primary">詳細はこちら</a>
             </div>
           </div>
         </div>

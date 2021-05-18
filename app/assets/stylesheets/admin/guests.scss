@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*=====================================
+ テーブル
+=====================================*/
+
 .gueststable{
   border-collapse:collapse;
   margin:0 auto;
@@ -28,8 +32,12 @@
 }
 //
 
+/*=====================================
+ h2のタイトル
+=====================================*/
 
-.cp_h2title {
+
+.cp_h2guesttitle {
 	padding: .3em;
 	border: dashed 1px #ffffff;
 	background: #80DEEA;

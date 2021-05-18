@@ -31,7 +31,7 @@ Rails.application.routes.draw do
      get 'tops/top', to: 'tops#top', as: 'top'
     resources :guests, only: [:index, :edit, :update]
     resources :faqs, only: [:index, :new, :edit, :create, :update]
-    resources :brochures, only: [:index, :new, :edit, :create, :update]
+    resources :brochures
     resources :countries
     resources :schools, only: [:index, :new, :edit, :create, :update]
     resources :cities, only: [:index, :new, :edit, :create, :update]

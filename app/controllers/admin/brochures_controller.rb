@@ -35,6 +35,13 @@ class Admin::BrochuresController < ApplicationController
       end
   end
 
+  def destroy
+    @brochure = Brochure.find(params[:id])
+    @brochure.destroy
+      redirect_to admin_brochures_path
+  end
+
+
   private
   def brochure_params
     params.require(:brochure).permit(:title, :introduction, :image)

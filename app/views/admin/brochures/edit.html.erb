@@ -3,7 +3,7 @@
     <div class="col-md-8 mx-auto">
        <%= form_with model: @brochure, url:admin_brochure_path, local:true do |f| %>
       <table class="table table-borderless">
-        <h2>パンフレット編集</h2>
+        <h2 class="cp_h2brochuretitleedit">パンフレット編集</h2>
         <tbody>
             <tr>
              <td>パンフレット画像</td>
@@ -14,11 +14,14 @@
               <td><%= f.text_field :title, class: "form-control" %></td>
             </tr>
             <tr>
-              <td>Introduction</td>
+              <td>紹介文</td>
               <td><%= f.text_area :introduction, class: "form-control" %></td>
             </tr>
               <td>
               <%= f.submit "変更を保存", class: "btn btn-success rounded-pill" %>
+              </td>
+              <td>
+              <%= link_to "パンフレットを削除", admin_brochure_path(@brochure.id), method: :delete, class: "btn btn-success rounded-pill" %>
               </td>
             </tr>
         </tbody>

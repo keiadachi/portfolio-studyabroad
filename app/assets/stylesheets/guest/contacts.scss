@@ -8,11 +8,25 @@
 =====================================*/
 
 .title {
-  font-weight:  bold;
+  position: relative;
+  padding: 0.6em;
+  background: #fcebb6;
 }
 
+.title:after {
+  position: absolute;
+  content: '';
+  top: 100%;
+  left: 30px;
+  border: 15px solid transparent;
+  border-top: 15px solid #fcebb6;
+  width: 0;
+  height: 0;
+}
+
+
+
 .text {
-  color: #293462;
   font-weight:  bold;
   line-height: 30px;
   // 行間

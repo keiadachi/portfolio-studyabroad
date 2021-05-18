@@ -25,6 +25,10 @@
         <li class="nav-item">
           <%= link_to 'お問い合わせ', contacts_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
         </li>
+        <li class="nav-item">
+          <%= link_to 'カウンセリング', consultations_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+        </li>
+
 
         <% elsif admin_signed_in? %>
           <li class="nav-item">
