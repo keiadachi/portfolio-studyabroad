@@ -2,6 +2,9 @@ class Guest::ContactsController < ApplicationController
 
   before_action :authenticate_guest!
 
+  def index
+  end
+
   def new
     @contact = Contact.new
   end
@@ -9,7 +12,7 @@ class Guest::ContactsController < ApplicationController
   def confirm
     @contact = Contact.new(contact_params)
     if @contact.invalid?
-      render :new
+     render :new
     end
   end
 
@@ -24,7 +27,7 @@ class Guest::ContactsController < ApplicationController
       ContactMailer.send_mail(@contact).deliver_now
       redirect_to done_path
     else
-      render :new
+      render 'new'
     end
   end
 

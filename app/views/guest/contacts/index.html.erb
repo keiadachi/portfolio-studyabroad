@@ -1,15 +1,13 @@
 <div class="container">
   <div class="row">
-
-    <div class="col-md-6 mt-auto">
+    <div class="col-lg-6">
       <%= image_tag 'contact.jpg', class: "contactimage" %>
-
     </div>
     <!--offsetは余白、colは表示範囲、mはmargin、tはtop-->
 
-    <div class="col-md-6 pb-3">
+    <div class="col-lg-6 pb-3">
       <p class="text">
-      <h4 class=title>＜弊社へのお問い合わせについて＞</h4></br>
+      <h4 class="title">＜弊社へのお問い合わせについて＞</h4></br>
       留学についての疑問や不安に対してお答し、</br>
       状況や希望に応じた留学を実現させてくれるのが留学カウンセラー。</br>
       弊社のカウンセラーは、全員が留学経験者。</br>
@@ -17,16 +15,17 @@
       一人ひとりと向き合って丁寧にお話しし、</br>
       最新の現地情報を紹介しながら、成功する留学へと導きます。</br>
       ご都合が付かない方にはメールでの相談も承ります。</br>
-      <span class="underline">カウンセリング受付時間：</span></br>
-      池袋（東京本社）／火・木・金 11：00～17：00</br>
-      堂島（西日本留学センター）／月・水・金 11：00～17：00</br>
+      <span class="underline">お問い合わせ受付時間：</span></br>
+      東京本社／月曜～金曜 10：00～22：00</br>
+      大阪支店／月曜～金曜 09：00～21：00</br>
       ※上記以外及び祝日、12/30～1/3 は定休日
       </p>
-      <%= link_to "お問い合わせはこちら", root_path, class: 'btn btn-primary' %>
+      <%= link_to "お問い合わせはこちら", new_contact_path, class: 'btn btn-primary' %>
     </div>
   </div>
-  </div>
-
   <%= render 'guest/homes/linkbuttom' %>
   <%= render 'guest/homes/company' %>
+
+  </div>
+
 </div>

@@ -23,7 +23,7 @@
           <%= link_to 'マイページ', edit_guest_path(current_guest.id), data: {"turbolinks" => false}, class: 'nav-link text-black' %>
         </li>
         <li class="nav-item">
-          <%= link_to 'お問い合わせ', new_contact_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
+          <%= link_to 'お問い合わせ', contacts_path, data: {"turbolinks" => false}, class: 'nav-link text-black' %>
         </li>
 
         <% elsif admin_signed_in? %>
@@ -74,7 +74,7 @@
         </nav>
       </div>
     </div>
-    
+
     <div class="toggle_btn">
     <span></span>
     <span></span>

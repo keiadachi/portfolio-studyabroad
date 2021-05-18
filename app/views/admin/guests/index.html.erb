@@ -24,7 +24,7 @@
         <tr>
           <td class="gueststd"><%= guests.id %></td>
           <td class="gueststd">
-            <%= link_to edit_admin_guest_path(guests) do %>
+            <%= link_to edit_admin_guest_path(guests), data: {"turbolinks" => false} do %>
             <%= guests.name %>
             <% end %>
           </td>
