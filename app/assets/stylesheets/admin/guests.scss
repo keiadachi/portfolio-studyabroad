@@ -1,3 +1,40 @@
 // Place all the styles related to the admin::guests controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.gueststable{
+  border-collapse:collapse;
+  margin:0 auto;
+  width: 100%;
+  text-align:center;
+}
+
+.gueststd {
+   padding:20px;
+   border-bottom:2px solid #80bcff;
+
+}
+
+.gueststh {
+  padding:10px;
+  color:#fff;
+  background:#005ab3;
+  // text-align:center;
+
+}
+
+.gueststable tr:nth-child(odd){
+  background:#e6f2ff;
+}
+//
+
+
+.cp_h2title {
+	padding: .3em;
+	border: dashed 1px #ffffff;
+	background: #80DEEA;
+	box-shadow: 0px 0px 0px 5px #80DEEA;
+	color: #ffffff;
+	margin-left: 50px;
+	text-align:center;
+}

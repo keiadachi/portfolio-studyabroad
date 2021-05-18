@@ -1,14 +1,16 @@
-<div class="container my-5">
+<div class="container">
   <div class="row">
-    <div class="col-md-5 text-center mx-auto mb-3">
-      <h3 style="background:#EEEEEE;" class="rounded-circle">
-        <%= @guest.name %>さんの会員情報編集
-      </h3>
+    <div class="col-lg-5 offset-lg-2 mt-3" >
+      <h2 class="cp_h2title"><%= @guest.name %>さんの会員情報編集 </h2>
     </div>
   </div>
+
+
   <div class="row">
-    <div class="col-md-8 mx-auto mb-5">
-      <%#<%= render 'layouts/errors', obj: @customer %>
+    <div class="col-lg-7 offset-lg-3 mt-3">
+
+      <%= render 'layouts/errors', obj: @guest %>
+
       <%= form_with(model:@guest, url:admin_guest_path, local: true ,method: :patch) do |f| %>
         <div class="form-group">
           <%= f.label :会員id %>

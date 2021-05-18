@@ -28,7 +28,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-    resources :tops, only: [:index]
+     get 'tops/top', to: 'tops#top', as: 'top'
     resources :guests, only: [:index, :edit, :update]
     resources :faqs, only: [:index, :new, :edit, :create, :update]
     resources :brochures, only: [:index, :new, :edit, :create, :update]

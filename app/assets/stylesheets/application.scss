@@ -25,6 +25,7 @@
 main {
   min-height: calc(100vh - 7rem);
   padding: 50px;
+  flex: 1;
 }
 
 .wrap {
@@ -271,6 +272,10 @@ body
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+
 }
 
 
@@ -281,8 +286,10 @@ footer{
   color: white;
   text-align:center;
   background-color: #293462;
+
 }
 
 .footer-text{
   margin-top: 10px;
+
 }

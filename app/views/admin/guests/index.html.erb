@@ -1,46 +1,47 @@
-<div class="container my-5">
+<div class="container">
   <div class="row">
-    <div class="col-md-3 text-center">
-			<h2 style="background:#EEEEEE;" class="rounded-circle">会員一覧</h2>
+    <div class="col-lg-6 offset-lg-4 ml-5 mt-3" >
+			<h2 class="cp_h2title">お客様一覧／編集</h2>
 		</div>
   </div>
 
-  <div class="row mt-4">
-    <table class="table table-hover text-center">
-      <thead style="background:#fffacd;">
-          <tr>
-            <th>ID</th>
-            <th>名前</th>
-            <th>メールアドレス</th>
-            <th>住所</th>
-            <th>電話番号</th>
-            <th>入会情報</th>
-          </tr>
-        </thead>
+  <div class="row">
+    <div class="col-lg-10 offset-lg-1 mt-4" >
+    <table class="gueststable">
+      <thead>
+        <tr>
+          <th class="gueststh">ID</th>
+          <th class="gueststh">名前</th>
+          <th class="gueststh">メールアドレス</th>
+          <th class="gueststh">住所</th>
+          <th class="gueststh">電話番号</th>
+          <th class="gueststh">入会情報</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <% @guests.each do |guests| %>
-          <tr>
-            <td><%= guests.id %></td>
-              <td>
-              <%= link_to edit_admin_guest_path(guests) do %>
-              <%= guests.name %>
-              <% end %>
-              </td>
-            <td><%= guests.email %></td>
-            <td><%= guests.address %></td>
-            <td><%= guests.phone_number %></td>
-            <td>
-              <% if guests.guest_status == true %>
-              <p class="text-success">有効</p>
-              <% else %>
-              <p>退会</p>
-              <% end %>
-            </td>
-          </tr>
-          <% end %>
-        </tbody>
-      </table>
+      <tbody>
+        <% @guests.each do |guests| %>
+        <tr>
+          <td class="gueststd"><%= guests.id %></td>
+          <td class="gueststd">
+            <%= link_to edit_admin_guest_path(guests) do %>
+            <%= guests.name %>
+            <% end %>
+          </td>
+          <td class="gueststd"><%= guests.email %></td>
+          <td class="gueststd"><%= guests.address %></td>
+          <td class="gueststd"><%= guests.phone_number %></td>
+          <td class="gueststd">
+            <% if guests.guest_status == true %>
+              <font color="#0000ff">有効</font>
+            <% else %>
+              <font color="black">退会</font>
+            <% end %>
+          </td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
         <%#<%= paginate @customers %>
     </div>
   </div>
