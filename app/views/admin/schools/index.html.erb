@@ -1,33 +1,36 @@
-<div class="container my-5">
+<div class="container">
+
   <div class="row">
-    <div class="col-md-3 text-center">
-			<h2 style="background:#EEEEEE;" class="rounded-circle">語学学校一覧</h2>
+    <div class="col-lg-6" >
+			<h2 class="cp_h2schooltitle">語学学校一覧</h2>
 		</div>
   </div>
 
-<div class="row text-right">
-    <%= link_to "+", new_admin_school_path, class: "btn-danger btn-outline-light btn-lg rounded-circle text-right ml-auto shadow-sm" %>
+  <div class="row">
+      <div class="col-lg-10 offset-lg-1" >
+
+  <div class="row text-right mb-3">
+    <%= link_to "+", new_admin_school_path, data: {"turbolinks" => false}, class: "btn-danger btn-outline-light btn-lg rounded-circle text-right ml-auto shadow-sm" %>
   </div>
 
-  <div class="row mt-4">
-    <table class="table table-hover text-center">
+    <table class="schooltable">
       <thead style="background:#fffacd;">
           <tr>
-            <th>ID</th>
-            <th>語学学校名</th>
-            <th>対象国</th>
+            <th class="schoolth">ID</th>
+            <th class="schoolth">語学学校名</th>
+            <th class="schoolth">対象国</th>
           </tr>
         </thead>
         <tbody>
           <% @schools.each do |schools| %>
           <tr>
-            <td><%= schools.id %></td>
-              <td>
-              <%= link_to edit_admin_school_path(schools) do %>
+            <td class="schooltd"><%= schools.id %></td>
+              <td class="schooltd">
+              <%= link_to edit_admin_school_path(schools), data: {"turbolinks" => false} do %>
               <%= schools.school_name %>
               <% end %>
               </td>
-            <td><%= schools.country.country_name %></td>
+            <td class="schooltd"><%= schools.country.country_name %></td>
           </tr>
           <% end %>
         </tbody>

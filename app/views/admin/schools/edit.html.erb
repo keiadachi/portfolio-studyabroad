@@ -1,2 +1,55 @@
-<h1>Admin::Schools#edit</h1>
-<p>Find me in app/views/admin/schools/edit.html.erb</p>
+<div class="container">
+
+  <div class="row">
+    <div class="col-md-9 mx-auto">
+
+      <%= form_with model: @school, url:admin_school_path, local:true do |f| %>
+      <table class="table table-borderless">
+        <h2 class="cp_h2schooltitleedit">語学学校の編集</h2>
+          <tbody>
+              <tr>
+               <td>語学学校画像</td>
+               <td><%= f.attachment_field :image %></td>
+              </tr>
+              <tr>
+                <td>語学学校名</td>
+                <td><%= f.text_field :school_name, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <td>コース名</td>
+                <td><%= f.text_field :course_name, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <td>学校紹介</td>
+                <td><%= f.text_area :introduction, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <td>滞在方法</td>
+                <td><%= f.text_field :stay, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <td>国籍</td>
+                <td><%= f.text_field :nationality, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <td>コース紹介</td>
+                <td><%= f.text_area :course_introduction, class: "form-control" %></td>
+              </tr>
+              <tr>
+                <td>国籍</td>
+                <td><%= f.text_field :nationality, class: "form-control" %></td>
+              </tr>
+                <td>
+                <%= f.submit "変更を保存", class: "btn btn-success rounded-pill" %>
+                </td>
+                <td>
+                <%= link_to "語学学校を削除", admin_school_path(@school.id), method: :delete, class: "btn btn-success rounded-pill" %>
+                </td>
+              </tr>
+          </tbody>
+      </table>
+      <% end %>
+
+    </div>
+  </div>
+</div>

@@ -1,7 +1,8 @@
 <div class="container">
   <div class="row">
-      <h3 class="h3"><%= @country.country_name %>と語学学校について</h3>
-    <div class="col-lg-9 offset-lg-1 mt-3" >
+    <h3 class="h3coutryshow"><%= @country.country_name %>と語学学校について</h3>
+    <div class="col-lg-9 offset-lg-1 mt-4" >
+
       <div class="contents_header">
         <%= attachment_image_tag @country, :image, fallback: 'noimage.jpg', class: "country_schoolimage" %>
         <div class="countryinfo">
@@ -10,11 +11,13 @@
             <li>人口：<%= @country.country_population %>人</li>
             <li>言語：<%= @country.language %></li>
             <li>通貨：<%= @country.currency %></li>
-          </div>
+        </div>
       </div>
+
       <div class="country_introduction">
         <%= @country.introduction %>
       </div>
+
     </div>
   </div>
 
@@ -34,5 +37,8 @@
       </table>
     </div>
   </div>
+
+  <%= render 'guest/homes/linkbuttom' %>
+  <%= render 'guest/homes/company' %>
 
 </div>

@@ -1,11 +1,14 @@
-<div class="container my-5">
+<div class="container">
+
   <div class="row">
-  <div class="col-md-3 mx-auto mb-3 text-center">
-  <h3 style="background:#EEEEEE;" class="rounded-circle">語学学校新規登録</h3>
+    <div class="col-lg-6" >
+      <h2 class="cp_h2schooltitlenew">語学学校新規登録</h3>
+    </div>
   </div>
-  </div>
+
   <div class="row">
-    <div class="col-md-8 mx-auto">
+    <div class="col-lg-10 offset-lg-1" >
+      
       <%= form_with model: @school, url:admin_schools_path, local:true do |f| %>
       <table class="table table-borderless">
         <tbody>

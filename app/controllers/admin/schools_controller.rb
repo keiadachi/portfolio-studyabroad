@@ -1,5 +1,5 @@
 class Admin::SchoolsController < ApplicationController
-  
+
   before_action :authenticate_admin!
 
   def index
@@ -16,6 +16,7 @@ class Admin::SchoolsController < ApplicationController
   end
 
   def edit
+    @school = School.find(params[:id])
   end
 
   def create
@@ -30,7 +31,14 @@ class Admin::SchoolsController < ApplicationController
   end
 
   def update
+    @school = School.find(params[:id])
+      if @school.update(school_params)
+        redirect_to admin_schools_path(@schools)
+      else
+        redirect_to edit_admin_school_path(@school)
+      end
   end
+
 
   private
   def school_params
