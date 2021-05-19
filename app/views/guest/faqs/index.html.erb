@@ -1,37 +1,117 @@
-<div class="container my-5">
+<div class="container">
+
   <div class="row">
-    <div class="col-md-3 text-center">
-			<h2 style="background:#EEEEEE;" class="rounded-circle">Q＆A一覧</h2>
+    <div class="col-lg-8 offset-lg-2">
+			<h1 class="faqh1">Q＆A一覧</h2>
 		</div>
   </div>
 
-  <div class="row mt-4">
-    <table class="table table-hover text-center">
-      <thead style="background:#fffacd;">
-        <% @faqs.each do |faqs| %>
-          <tr>
-          </tr>
-          <tr>
-            <th><%= faqs.id %></th>
-            <td><%= faqs.question %></td>
-          </tr>
-          <tr>
-            <th></th>
-            <td><%= faqs.answer %></td>
-          </tr>
-        <% end %>
-      </thead>
-      </table>
-    </div>
-  </div>
+  <div class="row mt-5">
 
-<div class="menu">
-    <label for="menu_bar01">アコーディオン１</label>
-    <input type="checkbox" id="menu_bar01" class="checkbox" />
-    <ul id="links01">
-        <li><a href="">Link01</a></li>
-        <li><a href="">Link02</a></li>
-        <li><a href="">Link03</a></li>
-        <li><a href="">Link04</a></li>
+    <ul class="accordion">
+      <li>
+        <label for="meat1">Ｑ：JTBガイアレックは、何の会社ですか？</label>
+        <input type="radio" name="accordion" id="meat1" />
+          <ul class="menu">
+            <li><a href="https://www.jtb.co.jp/jtbglobal/qa/">
+              <b>Ａ：</b>私たち留学情報センターは、「体験」と「学び」をプロデュースする会社です。
+              目的や年齢等に応じ、豊富な留学プログラムを提供しています。日本旅行業協会（JATA）、ボンド保証会員、
+              旅行業公正取引協議会、JAOS海外留学協議会の会員であり、留学費用を預けて心配もなく、
+              安心してお申込みいただけます。「留学」は弊社にお任せください。
+              弊社は、100年以上に渡る豊富な経験を基に、数多くの留学生を世界に送りだしてきました。
+              海外支店のネットワークを活かし、充実した留学生活をサポートします。
+            </a></li>
+          </ul>
+      </li>
+      <li>
+        <label for="meat2">Ｑ：出発前のオリエンテーションは行ってもらえますか？</label>
+        <input type="radio" name="accordion" id="meat2" />
+          <ul class="menu">
+          <li><a href="https://www.jtb.co.jp/jtbglobal/qa/"><b>Ａ：</b>ほとんどの留学商品では、出発前オリエンテーション（グループまたは個別）を実施しています。
+          入国審査に関する情報、学校初日の案内等を行います。出発までの準備、持ち物リスト、不安なこと等何でも質問できますので、不安を解消してご出発できます。
+          遠方の方には、お電話でオリエンテーションを実施しますので、ご安心ください。</a></li>
+        </ul>
+      </li>
+      <li>
+        <label for="meat3">Ｑ：英語に自信がなくても留学できますか？</label>
+        <input type="radio" name="accordion" id="meat3" />
+        <ul class="menu">
+          <li><a href="https://www.jtb.co.jp/jtbglobal/qa/"><b>Ａ：</b>最初から英語に自信がある人はいません。語学学校の場合は、レベルに合わせたクラス分けがありますので、
+          レベルに合ったクラスで勉強することが出来ます。日本出発前に出来る限り準備をしておくことも必要です。
+          もし本格的な海外進学を目指すなら、高校留学や最初に英語力アップのための集中プログラムを受けて大学へ進学する
+          「条件付き入学」などのプログラムもあります。</a></li>
+        </ul>
+      </li>
+      <li>
+        <label for="meat4">Ｑ：治安が気になりますが、大丈夫ですか？</label>
+        <input type="radio" name="accordion" id="meat4" />
+        <ul class="menu">
+          <li><a href="https://www.jtb.co.jp/jtbglobal/qa/"><b>Ａ：</b>大学や語学学校がある地域は駅の近くや比較的落ち着いた地域に位置する為、治安に関して心配しすぎる必要はありません。
+          但し、留学中は海外で生活しているということを常に心に留め、夜遅くに出歩かない、裏通りに入らない、
+          人ごみでは荷物は前に抱えるなど、自己責任の元で行動してください。</a></li>
+        </ul>
+      </li>
+      <li>
+        <label for="meat5">Ｑ：ホームステイと寮のメリットデメリットを教えてください</label>
+        <input type="radio" name="accordion" id="meat5" />
+        <ul class="menu">
+          <li><a href="https://www.jtb.co.jp/jtbglobal/qa/"><b>Ａ：</b>ホームステイはその国、その都市の一般的な家庭に滞在するので、生きた英語に触れ、その国の生活習慣や文化を体験し、知ることが出来ます。
+          それぞれの家庭により人種、家族構成、職業等が異なるため、その家庭のルールに従って生活する必要があります。
+          食事と部屋が用意され、他の滞在方法よりも費用が安いのも魅力です。寮滞在は同じ敷地内や学校近くにあることが多いため、通学に時間がかかりません。
+          またホームステイと比較し、自分のペースで生活することができますが、その国の文化習慣を学ぶことが出来ません。また日本人とのみ生活してしまう可能性があります。
+          食事がついていない場合は、好きなものを食べることが出来ますが、自分で調達する必要があり、費用もかかります</a></li>
+        </ul>
+      </li>
+      <li>
+        <label for="meat6">Ｑ：出発前にしておくべきことはありますか？</label>
+        <input type="radio" name="accordion" id="meat6" />
+        <ul class="menu">
+          <li><a href="https://www.jtb.co.jp/jtbglobal/qa/"><b>Ａ：</b>特別な準備は必要ありませんが、しておいた方が良いことはいくつかあります。</br>
+          1）滞在する国と都市について調べておく、2）日本について基本的なことは英語で説明できるようにしておく</br>3）色々な人に会うことになるので英語での簡単な自己紹介を準備しておく
+          4）体調管理に気を付け、虫歯などは治しておく、などです。</a></li>
+        </ul>
+      </li>
     </ul>
+    <blockquote>
+    <p class="inyo">引用元：株式会社JTBガイアレック</p>
+  </div>
+  <%= render 'guest/homes/linkbuttom' %>
+  <%= render 'guest/homes/company' %>
 </div>
+
+<!--<table class="table table-hover text-center">-->
+<!--      <thead style="background:#fffacd;">-->
+<!--        <%#<% @faqs.each do |faqs| %>-->
+<!--          <tr>-->
+<!--            <%#<th><%= faqs.id %></th>-->
+<!--            <%#<td><%= faqs.question %></td>-->
+<!--          </tr>-->
+<!--          <tr>-->
+<!--            <th></th>-->
+<!--            <%#<td><%= faqs.answer %></td>-->
+<!--          </tr>-->
+<!--        <%#<% end %>-->
+<!--      </thead>-->
+<!--      </table>-->
+<!--    </div>-->
+
+
+
+
+<!--<div class="menu">-->
+<!--    <label for="menu_bar01">アコーディオン１</label>-->
+<!--    <input type="checkbox" id="menu_bar01" />-->
+<!--    <ul id="links01">-->
+<!--        <li><a href="">Link01</a></li>-->
+<!--        <li><a href="">Link02</a></li>-->
+<!--        <li><a href="">Link03</a></li>-->
+<!--        <li><a href="">Link04</a></li>-->
+<!--    </ul>-->
+<!--    <label for="menu_bar02">アコーディオン２</label>-->
+<!--    <input type="checkbox" id="menu_bar02" />-->
+<!--    <ul id="links02">-->
+<!--        <li><a href="">Link01</a></li>-->
+<!--        <li><a href="">Link02</a></li>-->
+<!--        <li><a href="">Link03</a></li>-->
+<!--        <li><a href="">Link04</a></li>-->
+<!--    </ul>-->

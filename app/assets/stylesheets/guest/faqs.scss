@@ -3,46 +3,114 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-// .menu a {
-//     display: block;
-//     padding: 15px;
-//     text-decoration: none;
-//     color: #000;
-// }
+/*=====================================
+ タイトル
+=====================================*/
 
-// label {
-//     display: block;
-//     margin: 0 0 4px 0;
-//     padding : 15px;
-//     line-height: 1;
-//     color :#fff;
-//     background : green;
-//     cursor :pointer;
-// }
+.faqh1 {
+  color: #364e96;/*文字色*/
+  padding: 0.5em 0;/*上下の余白*/
+  border-top: solid 6px #364e96;/*上線*/
+  border-bottom: solid 6px #364e96;/*下線*/
+}
 
-// input {
-//     display: none;
-// }
 
-// .menu ul {
-//     margin: 0;
-//     padding: 0;
-//     background :#f4f4f4;
-//     list-style: none;
-// }
+/*=====================================
+ アコーディオン
+=====================================*/
 
-// .menu li {
-//     height: 0;
-//     overflow: hidden;
-//     -webkit-transition: all 0.5s;
-//     -moz-transition: all 0.5s;
-//     -ms-transition: all 0.5s;
-//     -o-transition: all 0.5s;
-//     transition: all 0.5s;
-// }
+.accordion{
+  width: 100%;
+  padding: 0;
+  color: #fff;
+  background-color: #FF8C65;
+  margin: 0 auto;
+  box-shadow: 0 2px 2px rgba(0,0,0,.1);
+  border-radius: 5px;
+  z-index: 1;
+}
 
-// #menu_bar01:checked ~ #links01 li,
-// {
-//     height: 54px;
-//     opacity: 1;
-// }
+.accordion label{
+  display: block;
+  margin: 0;
+  line-height: 50px;
+  font-size: 1.1em;
+  font-weight: 900;
+}
+
+.accordion label:before{
+  font-family: "Font Awesome 5 Free";
+  // content: "f105";
+  color: #fff;
+  font-weight: 900;
+  padding-right: 7px;
+  padding-left: 10px;
+  text-shadow: initial;
+}
+
+.accordion input{
+  position: absolute;
+  left: -9999em;/*画面外へ*/
+}
+
+.accordion .menu{
+  display: none;/*非表示に*/
+}
+
+.accordion input:checked ~ .menu{
+  display: block;
+  animation: slide 0.5s ease-in-out 0s;
+}
+
+.menu{
+  padding: 0;
+  background-color: #fbfbfb;
+  text-align: center;
+}
+
+.menu a{
+  display: block;
+  text-decoration: none;
+  line-height: 40px;
+  color: black;
+  width: 100%;
+}
+
+.accordion label:hover{
+  opacity: .7;
+}
+
+.menu as{
+  background-color: #fcd69e;
+}
+
+@keyframes slide{
+  0%{
+    max-height: 0;
+  }
+  100%{
+    max-height: 60vh;
+  }
+}
+
+.accordion input:checked + .menu{
+  display: block;
+  animation: slide 0.5s ease-in-out 0s;
+}
+
+@keyframes slide{
+  0%{
+    max-height:0;
+  }
+  100%{
+    max-height: 80vh;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+.inyo {
+  font-size: 15px;
+}

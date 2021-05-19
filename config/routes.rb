@@ -30,7 +30,8 @@ Rails.application.routes.draw do
   namespace :admin do
      get 'tops/top', to: 'tops#top', as: 'top'
     resources :guests, only: [:index, :edit, :update]
-    resources :faqs, only: [:index, :new, :edit, :create, :update]
+    #resources :faqs, only: [:index, :new, :edit, :create, :update]
+    # guest/faq html直書きに変更
     resources :brochures
     resources :countries
     resources :schools, only: [:index, :new, :edit, :create, :update]
