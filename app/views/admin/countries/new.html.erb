@@ -1,11 +1,14 @@
-<div class="container my-5">
+<div class="container">
+
   <div class="row">
-  <div class="col-md-3 mx-auto mb-3 text-center">
-  <h3 style="background:#EEEEEE;" class="rounded-circle">国の新規登録</h3>
+    <div class="col-lg-6" >
+      <h2 class="cp_h2countrytitletitlenew">国の新規登録</h3>
+    </div>
   </div>
-  </div>
+
   <div class="row">
-    <div class="col-md-8 mx-auto">
+    <div class="col-lg-10 offset-lg-1" >
+
       <%= form_with model: @country, url:admin_countries_path, local:true do |f| %>
       <table class="table table-borderless">
         <tbody>
@@ -48,4 +51,5 @@
       <% end %>
     </div>
   </div>
+
 </div>

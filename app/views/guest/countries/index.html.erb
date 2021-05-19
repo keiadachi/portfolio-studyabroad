@@ -1,35 +1,27 @@
 <div class="container">
+
   <div class="row">
-    <div class="col-lg-6 mt-3" >
-    <h3 class="h3index">気になる国から探してみよう！</h3>
+    <div class="col-lg-12 mt-3" >
+    <h1 class="countryindexh1">　＼　気になる国から探してみよう！　／</h1>
     </div>
   </div>
+
   <div class="row">
-      <% @country.each do |country| %>
-        <div class="col-md-4 mt-3">
-          <div class="card text-black bg-light border-primary" >
-            <%= attachment_image_tag country, :image, :fill, 150, 110, fallback: 'noimage.jpg', class: "img-thumbnail" %>
+    <% @country.each do |country| %>
+      <div class="col-md-4 mt-5">
+        <div class="card text-black bg-light border-primary" >
+          <%= attachment_image_tag country, :image, :fill, 150, 110, fallback: 'noimage.jpg', class: "img-thumbnail" %>
             <div class="card-body text-center">
               <h4 class="card-title"><%= country.country_name %></h4>
-               <p class="card-text"><%= country.introduction %></p>
+              <p class="card-text"><%= country.introduction %></p>
               <%= button_to '語学学校一覧はこちら', country_path(country),  { method: :get, class: "btn-square-pop" } %>
-              <%#<%= button_to "削除", "/users/1", { method: :delete, class: "hoge" } %>
             </div>
-          </div>
         </div>
-      <% end %>
+      </div>
+    <% end %>
   </div>
+
+  <%= render 'guest/homes/linkbuttom' %>
+  <%= render 'guest/homes/company' %>
+
 </div>
-
-
-<%#<ul>
-  <% @country.each do |country| %>
-<%#    <li><%= country.country_name %>
-<%#      <ul>
-        <% country.schools.each do |school| %>
-<%#          <li><%= school.school_name%>
-<%#        <% end %>
- <%#     </ul>
-    </li>
-  <% end %>
-<%#</ul>

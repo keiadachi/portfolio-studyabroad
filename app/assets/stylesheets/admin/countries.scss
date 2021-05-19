@@ -1,3 +1,74 @@
 // Place all the styles related to the admin::countries controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*=====================================
+ index テーブル
+=====================================*/
+
+.cp_h2countrytitle {
+	padding: .3em;
+	border: dashed 1px #ffffff;
+	background: #80DEEA;
+	box-shadow: 0px 0px 0px 5px #80DEEA;
+	color: #ffffff;
+	text-align: center;
+	margin-left: 55px;
+}
+
+.countrytable{
+  border-collapse:collapse;
+  margin-left: 50px;
+  width: 100%;
+  text-align:center;
+}
+
+.countrytd {
+   padding:20px;
+   border-bottom:2px solid #80bcff;
+
+}
+
+.countryth {
+  padding:20px;
+  color:#fff;
+  background:#005ab3;
+  // text-align:center;
+
+}
+
+.countrytable tr:nth-child(odd){
+  background:#e6f2ff;
+}
+
+/*=====================================
+ new h2のタイトル
+=====================================*/
+
+.cp_h2countrytitletitlenew {
+	padding: .3em;
+	border: dashed 1px #ffffff;
+	background: #80DEEA;
+	box-shadow: 0px 0px 0px 5px #80DEEA;
+	color: #ffffff;
+	text-align: center;
+	margin-left: 100px;
+	margin-bottom: 30px;
+	margin-top: 30px;
+}
+
+/*=====================================
+ edit h2のタイトル
+=====================================*/
+
+.cp_h2countrytitleedit {
+	padding: .3em;
+	border: dashed 1px #ffffff;
+	background: #80DEEA;
+	box-shadow: 0px 0px 0px 5px #80DEEA;
+	color: #ffffff;
+	text-align: center;
+	margin-left: 30px;
+	margin-bottom: 80px;
+}

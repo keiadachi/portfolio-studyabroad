@@ -1,39 +1,42 @@
-<div class="container my-5">
+<div class="container">
+
   <div class="row">
-    <div class="col-md-3 text-center">
-			<h2 style="background:#EEEEEE;" class="rounded-circle">国情報の一覧</h2>
+    <div class="col-lg-6" >
+			<h2 class="cp_h2countrytitle">国情報の一覧</h2>
 		</div>
   </div>
 
-<div class="row text-right">
-    <%= link_to "+", new_admin_country_path, class: "btn-danger btn-outline-light btn-lg rounded-circle text-right ml-auto shadow-sm" %>
+  <div class="row">
+    <div class="col-lg-11" >
+
+      <div class="row text-right mb-3">
+    <%= link_to "+", new_admin_country_path, data: {"turbolinks" => false}, class: "btn-danger btn-outline-light btn-lg rounded-circle text-right ml-auto shadow-sm" %>
   </div>
 
-  <div class="row mt-4">
-    <table class="table table-hover text-center">
+    <table class="countrytable">
       <thead style="background:#fffacd;">
           <tr>
-            <th>ID</th>
-            <th>国名</th>
-            <th>首都</th>
-            <th>人口</th>
-            <th>言語</th>
-            <th>通貨</th>
+            <th class="countryth">ID</th>
+            <th class="countryth">国名</th>
+            <th class="countryth">首都</th>
+            <th class="countryth">人口</th>
+            <th class="countryth">言語</th>
+            <th class="countryth">通貨</th>
           </tr>
         </thead>
         <tbody>
           <% @countries.each do |countries| %>
           <tr>
-            <td><%= countries.id %></td>
-              <td>
-              <%= link_to edit_admin_country_path(countries) do %>
+            <td class="countrytd"><%= countries.id %></td>
+              <td class="countrytd">
+              <%= link_to edit_admin_country_path(countries), data: {"turbolinks" => false} do %>
               <%= countries.country_name %>
               <% end %>
               </td>
-              <td><%= countries.capital %></td>
-              <td><%= countries.country_population %></td>
-              <td><%= countries.language %></td>
-              <td><%= countries.currency %></td>
+              <td class="countrytd"><%= countries.capital %></td>
+              <td class="countrytd"><%= countries.country_population %></td>
+              <td class="countrytd"><%= countries.language %></td>
+              <td class="countrytd"><%= countries.currency %></td>
           </tr>
           <% end %>
         </tbody>

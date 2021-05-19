@@ -7,6 +7,16 @@
  index テーブル
 =====================================*/
 
+.cp_h2brochuretitle {
+	padding: .3em;
+	border: dashed 1px #ffffff;
+	background: #80DEEA;
+	box-shadow: 0px 0px 0px 5px #80DEEA;
+	color: #ffffff;
+	text-align: center;
+	margin-left: 100px;
+}
+
 .brochuretable{
   border-collapse:collapse;
   margin:0 auto;
@@ -32,20 +42,6 @@
   background:#e6f2ff;
 }
 
-
-/*=====================================
- index h2のタイトル
-=====================================*/
-
-.cp_h2brochuretitle {
-	padding: .3em;
-	border: dashed 1px #ffffff;
-	background: #80DEEA;
-	box-shadow: 0px 0px 0px 5px #80DEEA;
-	color: #ffffff;
-	text-align: center;
-	margin-left: 100px;
-}
 
 /*=====================================
  edit h2のタイトル
