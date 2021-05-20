@@ -39,6 +39,11 @@ class Admin::SchoolsController < ApplicationController
       end
   end
 
+  def destroy
+    @school = School.find(params[:id])
+    @school.destroy
+      redirect_to admin_schools_path
+  end
 
   private
   def school_params

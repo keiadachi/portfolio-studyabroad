@@ -8,8 +8,9 @@
 
   <div class="row">
     <div class="col-lg-10 offset-lg-1" >
-      
+
       <%= form_with model: @school, url:admin_schools_path, local:true do |f| %>
+      <%#<%= render 'layouts/errors', obj: @school %>
       <table class="table table-borderless">
         <tbody>
             <tr>
@@ -19,10 +20,6 @@
             <tr>
               <td>語学学校名</td>
               <td><%= f.text_field :school_name, class: "form-control" %></td>
-            </tr>
-            <tr>
-              <td>コース名</td>
-              <td><%= f.text_field :course_name, class: "form-control" %></td>
             </tr>
             <tr>
               <td>学校紹介</td>
@@ -37,12 +34,16 @@
               <td><%= f.text_field :nationality, class: "form-control" %></td>
             </tr>
             <tr>
+              <td>コース名</td>
+              <td><%= f.text_field :course_name, class: "form-control" %></td>
+            </tr>
+            <tr>
               <td>コース紹介</td>
               <td><%= f.text_area :course_introduction, class: "form-control" %></td>
             </tr>
             <tr>
               <td>所在国</td>
-              <td><%= f.collection_select(:country_id, @countries, :id, :country_name, prompt: "-- 選択してください --", class: "col-sm-9 genre_id") %>
+              <td><%= f.collection_select(:country_id, @countries, :id, :country_name, prompt: "-- 選択してください --") %>
               </td>
               <!--f.collection_select(メソッド名, オブジェクトの配列, value属性の項目, テキストの項目 [, オプション or HTML属性 or イベント属性])-->
             </tr>

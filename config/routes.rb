@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   devise_scope :guest do
     post 'guests/user_sign_in', to: 'guests/sessions#user_sign_in'
   end
+  # ゲストログイン
 
   devise_for :admins
 
@@ -24,7 +25,7 @@ Rails.application.routes.draw do
     # railsroutesを確認すると
     # 国の一覧ページに国id別の語学学校詳細(show)のリンクを表示させるため
     resources :cities, only: [:index, :show]
-    resources :maps
+    # resources :maps
   end
 
   namespace :admin do
@@ -34,7 +35,7 @@ Rails.application.routes.draw do
     # guest/faq html直書きに変更
     resources :brochures
     resources :countries
-    resources :schools, only: [:index, :new, :edit, :create, :update]
+    resources :schools
     resources :cities, only: [:index, :new, :edit, :create, :update]
   end
 

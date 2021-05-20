@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-lg-10 offset-lg-1 mt-3" >
       <p class="school_name"><%= @school.school_name %></p>
-      <hr color="#ff0000" width="98%" class="hr">
+      <hr color="#ff0000" width="98%" class="hr"> <!--学校名下線-->
     </div>
   </div>
 
@@ -21,11 +21,11 @@
       <table class="school_table">
         <tr class="school_tr">
           <th class="school_th">コース名</th>
-          <td class="school_td"><%= @school.school_name %></td>
+          <td class="school_td"><%= @school.course_name %></td>
         </tr>
         <tr class="school_tr">
           <th class="school_th">コース紹介</th>
-          <td class="school_td"><%= @school.introduction %></td>
+          <td class="school_td"><%= @school.course_introduction %></td>
         </tr>
         <tr class="school_tr">
           <th class="school_th">滞在方法</th>
@@ -35,11 +35,10 @@
           <th class="school_th">学生の国籍</th>
           <td class="school_td"><%= @school.nationality %></td>
         </tr>
-
-
-
       </table>
     </div>
   </div>
 
+  <%= render 'guest/homes/linkbuttom' %>
+  <%= render 'guest/homes/company' %>
 </div>
