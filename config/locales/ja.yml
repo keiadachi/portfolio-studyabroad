@@ -1,14 +1,6 @@
 ja:
   activerecord:
-    attributes:
-      guest:
-        email: メールアドレス
-        password: パスワード
-        name: 名前
-        postal_code: 郵便番号
-        address: 住所
-        phone_number: 電話番号
-        
+
     attributes:
       contact:
         name: お名前
@@ -17,5 +9,14 @@ ja:
         message: お問い合わせ内容
         address: 住所
         phone_number: 電話番号
-        
-        
+
+      guest:
+        current_password: "現在のパスワード"
+        name: "名前"
+        postal_code: "郵便番号"
+        address: "住所"
+        phone_number: "電話番号"
+        email: "メールアドレス"
+        password: "パスワード"
+        password_confirmation: "確認用パスワード"
+        remember_me: "次回から自動的にログイン"
