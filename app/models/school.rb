@@ -9,14 +9,14 @@ class School < ApplicationRecord
       School.where("school_city_name LIKE?", "%#{content}%")
   end
 
-  # validates :school_name, presence: true, uniqueness: true,
-  #                 length: { minimum: 3, maximum: 10 }
+  validates :school_name, :school_city_name, presence: true,
+                  length: { minimum: 3, maximum: 10 }
 
-  # validates :introduction, :course_introduction, presence: true, uniqueness: true,
-  #                 length: { minimum: 150, maximum: 300 }
+  validates :introduction, :course_introduction, presence: true, uniqueness: true,
+                  length: { minimum: 150, maximum: 300 }
 
-  # validates :stay, :nationality, :course_name, presence: true,
-  #                 length: { minimum: 1 }
+  validates :stay, :nationality, :course_name, presence: true,
+                  length: { minimum: 1 }
 
 
 

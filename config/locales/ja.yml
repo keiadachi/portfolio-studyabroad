@@ -20,3 +20,28 @@ ja:
         password: "パスワード"
         password_confirmation: "確認用パスワード"
         remember_me: "次回から自動的にログイン"
+
+      country:
+        country_name: "国名"
+        capital: "首都"
+        country_population: "人口"
+        language: "言語"
+        currency: "通貨"
+        image: "画像"
+        introduction: "紹介文"
+
+      school:
+        school_name: "語学学校名"
+        course_name: "コース名"
+        introduction: "語学学校の紹介文"
+        stay: "滞在方法"
+        nationality: "学生の国籍"
+        course_introduction: "コースの紹介文"
+        school_city_name: "語学学校の所在都市"
+        image: "画像"
+        country: "所在国"
+
+      brochure:
+        title: "パンフレット名"
+        image: "画像"
+        introduction: "パンフレットの紹介文"

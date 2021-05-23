@@ -6,6 +6,7 @@
 
         <%= form_with model: @country, url:admin_country_path, local:true do |f| %>
         <table class="table table-borderless">
+        <%= render 'layouts/errors', obj: @country %>
           <tbody>
               <tr>
                <td>国の画像</td>

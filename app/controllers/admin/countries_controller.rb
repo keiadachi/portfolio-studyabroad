@@ -31,7 +31,7 @@ class Admin::CountriesController < ApplicationController
       if @country.update(country_params)
         redirect_to admin_countries_path
       else
-        redirect_to edit_admin_country_path(@country)
+        render :edit
       end
   end
 

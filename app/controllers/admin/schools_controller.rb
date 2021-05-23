@@ -33,7 +33,7 @@ class Admin::SchoolsController < ApplicationController
       if @school.update(school_params)
         redirect_to admin_schools_path(@schools)
       else
-        redirect_to edit_admin_school_path(@school)
+        render :edit
       end
   end
 

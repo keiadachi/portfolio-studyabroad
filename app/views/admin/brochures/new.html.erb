@@ -11,6 +11,7 @@
 
       <%= form_with model: @brochure, url:admin_brochures_path, local:true do |f| %>
       <table class="table table-borderless">
+        <%= render 'layouts/errors', obj: @brochure %>
         <tbody>
             <tr>
              <td>イメージ画像</td>
