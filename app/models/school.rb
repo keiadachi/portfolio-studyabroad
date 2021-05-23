@@ -1,10 +1,13 @@
 class School < ApplicationRecord
 
   attachment :image
-  #attachment_fieldを使用する際に必要　カラム名image_id
+  #attachment_fieldを使用する際に必要カラム名image_id
 
   belongs_to :country
-  #belongs_to :city
+
+  def self.search_for(content)
+      School.where("school_city_name LIKE?", "%#{content}%")
+  end
 
   # validates :school_name, presence: true, uniqueness: true,
   #                 length: { minimum: 3, maximum: 10 }

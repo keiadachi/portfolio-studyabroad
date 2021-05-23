@@ -1,7 +1,7 @@
 class Admin::CountriesController < ApplicationController
-  
+
   before_action :authenticate_admin!
-  
+
   def index
     @countries = Country.all
   end
@@ -33,6 +33,12 @@ class Admin::CountriesController < ApplicationController
       else
         redirect_to edit_admin_country_path(@country)
       end
+  end
+
+  def destroy
+    @country = Country.find(params[:id])
+    @country.destroy
+      redirect_to admin_countries_path
   end
 
   private

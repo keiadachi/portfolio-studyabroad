@@ -21,8 +21,6 @@ class Admin::SchoolsController < ApplicationController
 
   def create
     @school = School.new(school_params)
-    #@countries = Country.all
-      #binding.pry
     if @school.save
       redirect_to admin_schools_path
     else
@@ -48,7 +46,7 @@ class Admin::SchoolsController < ApplicationController
   private
   def school_params
     params.require(:school).permit(:country_id, :city_id, :school_name, :course_name,
-    :introduction, :stay, :nationality, :image, :course_introduction)
+    :introduction, :stay, :nationality, :image, :course_introduction, :school_city_name)
   end
 
 end

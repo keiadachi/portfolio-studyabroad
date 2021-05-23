@@ -16,6 +16,20 @@
 
       <div class="bg_pattern Polka"></div>
 
+      <% if guest_signed_in? %>
+        <div class="col-lg-12 mt-3" >
+          <div class="search">
+            <%= form_with url: search_path, local: true, method: :get do |f| %>
+              <%= f.text_field :content, placeholder: "語学学校検索(都市名：ロサンゼルス)", class:"form-control form-control-sm" %>
+              <%= f.button :type => "submit", style: 'border-style: none; background: none; cursor:pointer' do %>
+              <i class='fa fa-search'></i>
+              <% end %>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+
+
       <main>
         <%= yield %>
       </main>
