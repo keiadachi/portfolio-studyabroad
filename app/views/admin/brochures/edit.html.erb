@@ -1,5 +1,5 @@
 <div class="container">
-  
+
   <div class="row">
     <div class="col-md-8 mx-auto">
        <%= form_with model: @brochure, url:admin_brochure_path, local:true do |f| %>
@@ -12,11 +12,11 @@
             </tr>
             <tr>
               <td>タイトル</td>
-              <td><%= f.text_field :title, class: "form-control" %></td>
+              <td><%= f.text_field :title, class: "form-control", placeholder: "大人の遊学" %></td>
             </tr>
             <tr>
               <td>紹介文</td>
-              <td><%= f.text_area :introduction, class: "form-control" %></td>
+              <td><%= f.text_area :introduction, class: "form-control", placeholder: "50文字以内" %></td>
             </tr>
               <td>
               <%= f.submit "変更を保存", class: "btn btn-success rounded-pill" %>

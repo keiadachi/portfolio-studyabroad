@@ -9,23 +9,23 @@
             <tbody>
               <tr>
                 <th class="font-weight-normal"><%= f.label :名前 %></th>
-                <td><%= f.text_field :name %></td>
+                <td><%= f.text_field :name, placeholder: "山田太郎" %></td>
               </tr>
               <tr>
                 <th class="font-weight-normal"><%= f.label :郵便番号 %></th>
-                <td><%= f.text_field :postal_code %></td>
+                <td><%= f.text_field :postal_code, placeholder: "1102512" %></td>
               </tr>
               <tr>
                 <th class="font-weight-normal"><%= f.label :住所 %></th>
-                <td colspan="2"><%= f.text_field :address , :size=>"50" %></td>
+                <td colspan="2"><%= f.text_field :address , :size=>"50", placeholder: "東京都豊島区東池袋4-4-4" %></td>
               </tr>
               <tr>
                 <th class="font-weight-normal"><%= f.label :電話番号 %></th>
-                <td><%= f.text_field :phone_number %></td>
+                <td><%= f.text_field :phone_number, placeholder: "09012345678" %></td>
               </tr>
               <tr>
                 <th class="font-weight-normal"><%= f.label :メールアドレス %></th>
-                <td><%= f.email_field :email %></td>
+                <td><%= f.email_field :email, placeholder: "aaa@gmail.com" %></td>
               </tr>
             </tbody>
         </table>

@@ -19,27 +19,27 @@
             </tr>
             <tr>
               <td>語学学校名</td>
-              <td><%= f.text_field :school_name, class: "form-control" %></td>
+              <td><%= f.text_field :school_name, class: "form-control", placeholder: "カリフォルニア大学" %></td>
             </tr>
             <tr>
               <td>学校紹介</td>
-              <td><%= f.text_area :introduction, class: "form-control" %></td>
-            </tr>
-            <tr>
-              <td>滞在方法</td>
-              <td><%= f.text_field :stay, class: "form-control" %></td>
-            </tr>
-            <tr>
-              <td>国籍</td>
-              <td><%= f.text_field :nationality, class: "form-control" %></td>
+              <td><%= f.text_area :introduction, class: "form-control", placeholder: "100文字以上200文字以内" %></td>
             </tr>
             <tr>
               <td>コース名</td>
-              <td><%= f.text_field :course_name, class: "form-control" %></td>
+              <td><%= f.text_field :course_name, class: "form-control", placeholder: "General English、TOEICコースなど" %></td>
             </tr>
             <tr>
               <td>コース紹介</td>
-              <td><%= f.text_area :course_introduction, class: "form-control" %></td>
+              <td><%= f.text_area :course_introduction, class: "form-control", placeholder: "100文字以上200文字以内" %></td>
+            </tr>
+            <tr>
+              <td>滞在方法</td>
+              <td><%= f.text_field :stay, class: "form-control", placeholder: "ホームステイ・寮" %></td>
+            </tr>
+            <tr>
+              <td>国籍</td>
+              <td><%= f.text_field :nationality, class: "form-control", placeholder: "日本・メキシコ・スイスなど" %></td>
             </tr>
             <tr>
               <td>所在国</td>
@@ -49,7 +49,7 @@
             </tr>
             <tr>
               <td>都市</td>
-              <td><%= f.text_field :school_city_name, class: "form-control" %></td>
+              <td><%= f.text_field :school_city_name, class: "form-control", placeholder: "ロサンゼルス" %></td>
             </tr>
             <tr>
               <td>

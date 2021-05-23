@@ -18,28 +18,29 @@
             </tr>
             <tr>
               <td>国名</td>
-              <td><%= f.text_field :country_name, class: "form-control" %></td>
+              <td><%= f.text_field :country_name, class: "form-control", placeholder: "アメリカ" %></td>
             </tr>
             <tr>
               <td>首都</td>
-              <td><%= f.text_field :capital, class: "form-control" %></td>
+              <td><%= f.text_field :capital, class: "form-control", placeholder: "ワシントンD.C" %></td>
             </tr>
             <tr>
               <td>人口(人)</td>
-              <td><%= f.text_field :country_population, class: "form-control" %></td>
+              <td><%= f.text_field :country_population, class: "form-control", placeholder: "120万" %></td>
             </tr>
              <!--numberfieldだと多い分大変-->
             <tr>
               <td>言語</td>
-              <td><%= f.text_field :language, class: "form-control" %></td>
+              <td><%= f.text_field :language, class: "form-control", placeholder: "英語" %></td>
             </tr>
             <tr>
               <td>通貨</td>
-              <td><%= f.text_field :currency, class: "form-control" %></td>
+              <td><%= f.text_field :currency, class: "form-control", placeholder: "USドル" %></td>
             </tr>
             <tr>
               <td>説明</td>
-              <td><%= f.text_area :introduction, class: "form-control" %></td>
+              <td><%= f.text_area :introduction, class: "form-control", 
+              placeholder: "200文字以上300文字以内" %></td>
             </tr>
             <tr>
               <td>
