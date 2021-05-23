@@ -45,6 +45,26 @@
   margin-top: 85px;
 }
 
+/*=====================================
+ new h2のタイトル
+=====================================*/
+
+.cp_h2contacttitlenew {
+	padding: .3em;
+	border: dashed 1px #ffffff;
+	background: #80DEEA;
+	box-shadow: 0px 0px 0px 5px #80DEEA;
+	color: #ffffff;
+	text-align: center;
+	margin-left: 100px;
+	margin-bottom: 60px;
+}
+
+.contacttextnew {
+	text-align: center;
+	margin-left: 100px;
+}
+
 
 /*=====================================
  confirm
@@ -52,4 +72,15 @@
 
 .h3confirm {
   border-bottom: solid 3px black;
+}
+
+
+.thank-text{
+   height: 300px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   font-size: 40px;
+   margin-left: 75px;
+   line-height: 150%;
 }

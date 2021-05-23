@@ -9,5 +9,8 @@ class Country < ApplicationRecord
   validates :country_name, :capital, :country_population, :language, :currency,
   :image, :introduction, presence: true
 
+  validates :introduction, resence: true,
+                  length: { minimum: 50, maximum: 150 }
+
 
 end

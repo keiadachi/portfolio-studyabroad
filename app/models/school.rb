@@ -12,8 +12,8 @@ class School < ApplicationRecord
   validates :school_name, :school_city_name, presence: true,
                   length: { minimum: 3, maximum: 10 }
 
-  validates :introduction, :course_introduction, presence: true, uniqueness: true,
-                  length: { minimum: 150, maximum: 300 }
+  validates :introduction, :course_introduction, presence: true,
+                  length: { minimum: 100, maximum: 200 }
 
   validates :stay, :nationality, :course_name, presence: true,
                   length: { minimum: 1 }

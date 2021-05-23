@@ -1,8 +1,16 @@
 <div class="container">
   <div class="row">
-    <div class="col-lg-7 offset-lg-2 mt-4" >
+    <div class="col-lg-8 offset-lg-1 mt-1" >
+      <h2 class="cp_h2contacttitlenew">お問い合わせ</h2>
+      <p class="contacttextnew">現在、新型コロナウィルス感染拡大に伴う営業体制の変更により、</br>
+                                こちらからの返信が遅れる場合がございます。</br>
+                                お急ぎの場合は、電話番号(03-3454-1214)までご連絡ください。</p>
+    </div>
+  </div>
 
 
+  <div class="row">
+    <div class="col-lg-7 offset-lg-2 mt-1" >
       <%= form_for(@contact, url: confirm_path) do |f| %>
       <%= render 'layouts/errors', obj: @contact %>
 
