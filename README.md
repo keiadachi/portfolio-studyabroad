@@ -39,5 +39,5 @@ https://1drv.ms/x/s!Ah_oGfijPWkLgQdXeBpva72qVAr8?e=TfrF2C
 
 ## 使用素材
 今後追加予定
-- 外部サービスの画像素材・音声素材を使用した場合は、必ずサービス名とURLを明記してください。
-- 使用しない場合は、使用素材の項目をREADMEから削除してください。
+- 画像等情報関連：株式会社JTBガイアレック(前職)
+https://www.jtb.co.jp/jtbglobal/
