@@ -33,7 +33,7 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
-     get 'tops/top', to: 'tops#top', as: 'top'
+     #get 'tops/top', to: 'tops#top', as: 'top'
     resources :guests, only: [:index, :edit, :update]
     #resources :faqs, only: [:index, :new, :edit, :create, :update]
     # guest/faq html直書きに変更
