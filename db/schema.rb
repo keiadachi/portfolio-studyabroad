@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(version: 2021_05_16_051236) do
     t.string "image_id"
     t.integer "country_id"
     t.text "course_introduction"
-    t.string "school_city_name"
+    t.string "school_city"
   end
 
 end

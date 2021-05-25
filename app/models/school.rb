@@ -6,10 +6,10 @@ class School < ApplicationRecord
   belongs_to :country
 
   def self.search_for(content)
-      School.where("school_city_name LIKE?", "%#{content}%")
+      School.where("school_city LIKE?", "%#{content}%")
   end
 
-  validates :school_name, :school_city_name, presence: true,
+  validates :school_name, presence: true,
                   length: { minimum: 3, maximum: 10 }
 
   validates :introduction, :course_introduction, presence: true,
@@ -18,6 +18,7 @@ class School < ApplicationRecord
   validates :stay, :nationality, :course_name, presence: true,
                   length: { minimum: 1 }
 
+  validates :school_city, presence: true
 
 
 end
