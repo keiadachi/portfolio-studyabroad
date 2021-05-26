@@ -1,7 +1,7 @@
 class Contact < ApplicationRecord
 
   validates :name, presence: true,
-                   length: { minimum: 3, maximum: 10 }
+                   length: { minimum: 1, maximum: 15 }
 
   validates :message, presence: true,
                    length: { minimum: 10, maximum: 150 }
