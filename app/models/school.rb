@@ -10,7 +10,7 @@ class School < ApplicationRecord
   end
 
   validates :school_name, presence: true,
-                  length: { minimum: 3, maximum: 10 }
+                  length: { minimum: 3, maximum: 20 }
 
   validates :introduction, :course_introduction, presence: true,
                   length: { minimum: 100, maximum: 200 }
