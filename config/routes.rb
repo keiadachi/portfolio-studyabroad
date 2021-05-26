@@ -25,22 +25,15 @@ Rails.application.routes.draw do
     resources :countries, only: [:index, :show] do
       resources :schools, only: [:index, :show]
     end
-    # railsroutesを確認すると
     # 国の一覧ページに国id別の語学学校詳細(show)のリンクを表示させるため
-    resources :cities, only: [:index, :show]
-    # resources :maps
     get "search" => "searches#search"
   end
 
   namespace :admin do
-     #get 'tops/top', to: 'tops#top', as: 'top'
     resources :guests, only: [:index, :edit, :update]
-    #resources :faqs, only: [:index, :new, :edit, :create, :update]
-    # guest/faq html直書きに変更
     resources :brochures
     resources :countries
     resources :schools
-    resources :cities, only: [:index, :new, :edit, :create, :update]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
