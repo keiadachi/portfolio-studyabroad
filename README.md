@@ -38,6 +38,5 @@ https://1drv.ms/x/s!Ah_oGfijPWkLgQdXeBpva72qVAr8?e=TfrF2C
 - IDE：Cloud9
 
 ## 使用素材
-今後追加予定
 - 画像等情報関連：株式会社JTBガイアレック(前職)
 https://www.jtb.co.jp/jtbglobal/
