@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-  namespace :guest do
-    get 'searches/search'
-  end
   devise_for :guests
   devise_scope :guest do
     post 'guests/user_sign_in', to: 'guests/sessions#user_sign_in'
@@ -31,9 +28,9 @@ Rails.application.routes.draw do
 
   namespace :admin do
     resources :guests, only: [:index, :edit, :update]
-    resources :brochures
-    resources :countries
-    resources :schools
+    resources :brochures, except: [:show]
+    resources :countries, except: [:show]
+    resources :schools, except: [:show]
   end
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
