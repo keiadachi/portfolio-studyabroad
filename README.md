@@ -19,7 +19,7 @@
 留学を希望する大学生／社会人
 
 ### 主な利用シーン
-留学検討段階／相談希望時にアクセス
+留学検討段階の情報収集、カウンセリング希望時に問い合わせ
 
 ## 設計書
 - WBS【 https://1drv.ms/x/s!Ah_oGfijPWkLgRvccyziRj2Fm7Su?e=ad7Uhv 】</br>
