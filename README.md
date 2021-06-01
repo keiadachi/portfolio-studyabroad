@@ -33,12 +33,18 @@
 https://1drv.ms/x/s!Ah_oGfijPWkLgQdXeBpva72qVAr8?e=TfrF2C
 
 ## 開発環境
-- OS：Linux(CentOS)
+- OS：Amazon Linux release 2(Karoo)
 - 言語：HTML,CSS,JavaScript,Ruby,SQL
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
 - IDE：Cloud9
 
 ## 使用素材
-- 画像等情報関連：株式会社JTBガイアレック(前職)
+- 株式会社JTBガイアレック(前職)
 https://www.jtb.co.jp/jtbglobal/
+
+- O-DAN
+https://o-dan.net/ja/
+
+- お名前.com
+https://www.onamae.com/
