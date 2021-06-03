@@ -1,5 +1,8 @@
 # Studyabroad
 
+![main](https://user-images.githubusercontent.com/79110505/120594994-b107cf80-c47c-11eb-9207-ad74d2ded439.PNG)
+
+
 ## サイト概要
 語学留学を検討されている方向けに、世界中の語学学校情報をまとめたサイトです。</br>
 お問い合わせからカウンセリングの予約も可能です。</br>
@@ -31,6 +34,14 @@
 
 ## チャレンジ要素一覧
 https://1drv.ms/x/s!Ah_oGfijPWkLgQdXeBpva72qVAr8?e=TfrF2C
+- ユーザー登録、ログイン
+- お問い合わせ機能
+- 検索機能
+- CRUD処理
+- 画像アップロード
+- Bootstrap4
+- 環境変数(gem 'dotenv-rails'を用いて機密情報を格納)
+- データベース(MySQL)
 
 ## 開発環境
 - OS：Amazon Linux release 2(Karoo)
@@ -38,6 +49,10 @@ https://1drv.ms/x/s!Ah_oGfijPWkLgQdXeBpva72qVAr8?e=TfrF2C
 - フレームワーク：Ruby on Rails
 - JSライブラリ：jQuery
 - IDE：Cloud9
+
+## URL
+
+http://keiryugaku.com/
 
 ## 使用素材
 - 株式会社JTBガイアレック(前職)
